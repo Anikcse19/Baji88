@@ -1,0 +1,84 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mySwiper .swiper-pagination {
+  position: absolute;
+  bottom: 20px; /* Gap from the bottom */
+  right: 20px; /* Gap from the right */
+  width: auto; /* Make sure width is not full */
+  display: flex;
+  justify-content: flex-end; /* Align bullets to the right */
+}
+
+/* Change the color of inactive bullets */
+.mySwiper .swiper-pagination-bullet {
+  background-color: #1c6d51; /* Inactive bullet color */
+  opacity: 1; /* Optional: Make inactive bullets semi-transparent */
+  width: 15px;
+  height: 15px;
+  border: 1px solid black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.mySwiper .swiper-pagination-bullet:hover {
+  background-color: white; /* Inactive bullet color */
+  opacity: 1; /* Optional: Make inactive bullets semi-transparent */
+  width: 15px;
+  height: 15px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  transition: all;
+  transition-duration: 1s;
+}
+
+/* Change the color of the active bullet */
+.mySwiper .swiper-pagination-bullet-active {
+  background-color: white; /* Active bullet color */
+  opacity: 1; /* Full opacity for the active bullet */
+  width: 15px;
+  height: 15px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* Define keyframes for moving text from left to right */
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Add animation to move text */
+.text-move {
+  animation: scroll 20s linear infinite;
+}
+
+/* Pause animation on hover */
+.hover\:animation-pause:hover {
+  animation-play-state: paused;
+}

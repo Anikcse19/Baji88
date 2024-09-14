@@ -1,0 +1,39 @@
+.swiper-button-container {
+  position: absolute;
+  top: -30px; /* Adjust as needed */
+  right: 50px;
+  transform: translateX(-50%);
+  display: flex; /* Align items side by side */
+  /* background-color: #ff0000; */
+  padding-left: 20px;
+}
+
+/* Customize the next arrow */
+.swiper-button-next {
+  color: #fff; /* Change color */
+  /* background-color: rgba(0, 0, 0, 0.5); Add background color */
+  border-radius: 50%; /* Make the arrow circular */
+  padding: 10px; /* Add some padding */
+  right: -20px; /* Move the next button to the right */
+}
+
+/* Customize the previous arrow */
+.swiper-button-prev {
+  color: #fff; /* Change color */
+  background-color: rgba(0, 0, 0, 0.5); /* Add background color */
+  border-radius: 50%; /* Make the arrow circular */
+  padding: 10px; /* Add some padding */
+  left: -20px; /* Move the previous button to the left */
+}
+
+/* Add hover effect for the arrows */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darken the background on hover */
+}
+
+/* Change the size of the arrows */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px; /*Increase the size of the arrow*/
+}
