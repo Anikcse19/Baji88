@@ -2,6 +2,7 @@ import Center from "./Center";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { FaFacebookSquare } from "react-icons/fa";
+import { BiMenuAltLeft } from "react-icons/bi";
 import { LuMessagesSquare } from "react-icons/lu";
 import { useNavigate } from "react-router-dom";
 
@@ -10,7 +11,7 @@ const Header = () => {
   return (
     <div>
       {/* uper header start */}
-      <div className="bg-[#2D2D2D]">
+      <div className="bg-[#2D2D2D] hidden lg:block">
         <Center>
           <div className="flex items-center justify-between text-white text-sm  px-2">
             {/* left part */}
@@ -51,18 +52,19 @@ const Header = () => {
 
       {/* lower header start */}
       <div
-        style={{
-          background: "linear-gradient(to bottom,#1bac7e 0,#14805e 100%)",
-        }}
-        // className="bg-[#17966E]"
+        // style={{
+        //   background: "linear-gradient(to bottom,#1bac7e 0,#14805e 100%)",
+        // }}
+        className="lg:bg-gradient-to-b from-[#1bac7e] to-[#14805e] bg-[#111111]"
       >
         <Center>
-          <div className="flex items-center justify-between py-2">
+          <div className="flex items-center justify-between py-2 px-2">
             {/* left */}
-            <div className="flex items-center gap-5">
-              <div onClick={() => navigate("/")}>
+            <div className="flex items-center gap-2 lg:gap-5">
+              <BiMenuAltLeft className="lg:hidden text-green-700 text-3xl" />
+              <div onClick={() => navigate("/")} className="">
                 <img
-                  className="w-[120px] h-[50px] cursor-pointer"
+                  className="w-[70px] lg:w-[120px] h-[30px] lg:h-[50px] cursor-pointer"
                   src="/logo.png"
                   alt=""
                 />
@@ -78,8 +80,8 @@ const Header = () => {
               </div>
             </div>
             {/* right */}
-            <div className="flex items-center gap-3">
-              <div className="px-8 py-1 rounded-md hover:border hover:border-yellow-300 transition-all duration-300 ease-in cursor-pointer">
+            <div className="flex items-center gap-5 lg:gap-3">
+              <div className="hidden lg:block px-8 py-1 rounded-md hover:border hover:border-yellow-300 transition-all duration-300 ease-in cursor-pointer">
                 লগ ইন
               </div>
               <div
@@ -87,9 +89,25 @@ const Header = () => {
                   background:
                     "linear-gradient(to right, #fbc103 0, #f79604 15%, #f79604 30%, #fbc103 55%, #fbc103 100%)",
                 }}
-                className=" px-8 py-1 rounded-sm text-white"
+                className="hidden lg:block px-8 py-1 rounded-sm text-white"
               >
                 সাইন আপ
+              </div>
+              <div className="lg:hidden flex flex-col items-center">
+                <img
+                  className="w-6 h-5 hue-rotate-90 saturate-200 brightness-200"
+                  src="/app-icon.svg"
+                  alt=""
+                />
+                <p className="text-green-500 text-sm">App</p>
+              </div>
+              <div className="lg:hidden flex flex-col items-center ">
+                <img
+                  className="w-6 h-5 hue-rotate-90 saturate-200 brightness-200"
+                  src="/help-icon.svg"
+                  alt=""
+                />
+                <p className="text-green-500 text-sm">Help</p>
               </div>
             </div>
           </div>

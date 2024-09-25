@@ -6,10 +6,10 @@ import Footer from "../Footer";
 
 const Layout = ({ children }) => {
   return (
-    <div className="flex flex-col justify-between gap-y-5">
+    <div className="flex flex-col justify-between">
       <Header />
       <Navbar />
-      <div className="min-h-[100vh]">{children}</div>
+      <div className="">{children}</div>
       <Footer />
     </div>
   );

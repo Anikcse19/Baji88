@@ -5,7 +5,7 @@ const Footer = () => {
     <div className="bg-[#353535] mx-auto">
       <ToggleParagraph />
 
-      <div className="my-5 w-[75%] mx-auto">
+      <div className="my-5 w-[75%] mx-auto hidden lg:block">
         {/* services */}
         <div className="flex items-center justify-between gap-x-5 pb-5">
           {/* item 1 */}

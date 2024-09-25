@@ -9,5 +9,19 @@
 }
 
 body {
-  background-color: #4e4e4e;
+  background-color: black;
+}
+
+@media (min-wdith: 768px) {
+  body {
+    background-color: #4e4e4e;
+  }
+}
+
+div::-webkit-scrollbar {
+  display: none;
+}
+div {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

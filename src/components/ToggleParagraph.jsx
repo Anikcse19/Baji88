@@ -8,11 +8,11 @@ export default function ToggleParagraph() {
   };
 
   return (
-    <div className="w-full  mt-10">
-      <div className="w-[75%] mx-auto py-10">
+    <div className="w-full  pt-10 bg-black">
+      <div className="w-full lg:w-[75%] mx-auto py-2 lg:py-10 px-3 lg:px-0">
         <div
           className={`relative overflow-hidden transition-all duration-100 ease-in ${
-            isExpanded ? "max-h-full" : "max-h-52"
+            isExpanded ? "max-h-full" : "max-h-40 lg:max-h-52"
           }`}
         >
           <div className={`text-lg leading-7 text-gray-400`}>
