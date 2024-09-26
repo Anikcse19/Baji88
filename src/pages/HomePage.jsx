@@ -11,8 +11,6 @@ const HomePage = () => {
       <FloatingNav />
       {/* favourites and characteristics games for moile version */}
       <FavouritesAndCharcteristics />
-
-      <p className="text-white">test</p>
     </Layout>
   );
 };
