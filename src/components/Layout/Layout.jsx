@@ -3,8 +3,9 @@
 import Header from "../Header";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
-import Login from "../Modal/login";
+
 import useStore from "../../Zustand/store/useStore";
+import Login from "../Modal/login";
 
 const Layout = ({ children }) => {
   const { isLoginModalopen } = useStore();
