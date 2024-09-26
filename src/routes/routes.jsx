@@ -4,6 +4,7 @@ import CasinoPage from "../pages/CasinoPage";
 import HomePage from "../pages/HomePage";
 import SportsPage from "../pages/Sports";
 import ProfilePage from "../pages/dashboard/ProfilePage";
+import RegistrationPage from "../pages/RegistrationPage";
 
 const routes = createBrowserRouter([
   {
@@ -23,7 +24,10 @@ const routes = createBrowserRouter([
     element: <ProfilePage />,
   },
 
-
+  {
+    path: "/registration",
+    element: <RegistrationPage />,
+  },
 ]);
 
 export default routes;
