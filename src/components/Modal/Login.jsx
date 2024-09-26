@@ -3,7 +3,7 @@ import { RxCross1 } from "react-icons/rx";
 import { LuUser2 } from "react-icons/lu";
 import { FiLock } from "react-icons/fi";
 
-const Login = () => {
+const LoginModal = () => {
   const { isLoginModalopen, setIsLoginModalOpen } = useStore();
 
   // Function to close the modal by clicking on the background
@@ -78,4 +78,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginModal;
