@@ -1,6 +1,6 @@
 const FavouritesAndCharcteristics = () => {
   return (
-    <div className="bg-[#333333] py-5 px-3 lg:block">
+    <div className="bg-[#333333] py-5 px-3 lg:hidden">
       <div className="flex flex-col gap-y-8">
         {/* প্রিয় */}
         <div>

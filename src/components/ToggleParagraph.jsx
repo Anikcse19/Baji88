@@ -8,7 +8,7 @@ export default function ToggleParagraph() {
   };
 
   return (
-    <div className="w-full  pt-10 bg-black">
+    <div className="w-full  pt-10 ">
       <div className="w-full lg:w-[75%] mx-auto py-2 lg:py-10 px-3 lg:px-0">
         <div
           className={`relative overflow-hidden transition-all duration-100 ease-in ${

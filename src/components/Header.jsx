@@ -5,9 +5,12 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { BiMenuAltLeft } from "react-icons/bi";
 import { LuMessagesSquare } from "react-icons/lu";
 import { useNavigate } from "react-router-dom";
+import useStore from "../Zustand/store/useStore";
 
 const Header = () => {
   const navigate = useNavigate();
+
+  const { isLoginModalopen, setIsLoginModalOpen } = useStore();
   return (
     <div>
       {/* uper header start */}
@@ -81,15 +84,21 @@ const Header = () => {
             </div>
             {/* right */}
             <div className="flex items-center gap-5 lg:gap-3">
-              <div className="hidden lg:block px-8 py-1 rounded-md hover:border hover:border-yellow-300 transition-all duration-300 ease-in cursor-pointer">
+              <div
+                onClick={() => setIsLoginModalOpen(!isLoginModalopen)}
+                className="hidden lg:block px-8 py-1 rounded-md hover:border hover:border-yellow-300 transition-all duration-300 ease-in cursor-pointer"
+              >
                 লগ ইন
               </div>
               <div
+                onClick={() => {
+                  navigate("/registration");
+                }}
                 style={{
                   background:
                     "linear-gradient(to right, #fbc103 0, #f79604 15%, #f79604 30%, #fbc103 55%, #fbc103 100%)",
                 }}
-                className="hidden lg:block px-8 py-1 rounded-sm text-white"
+                className="hidden lg:block px-8 py-1 rounded-sm text-white cursor-pointer"
               >
                 সাইন আপ
               </div>

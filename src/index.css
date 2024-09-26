@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: black;
+  @apply bg-black lg:bg-[#4E4E4E];
 }
 
 @media (min-wdith: 768px) {
