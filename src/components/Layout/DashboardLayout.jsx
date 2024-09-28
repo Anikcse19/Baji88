@@ -34,7 +34,7 @@ const DashboardLayout = ({ children }) => {
       <div className="flex-1">{children}</div>
 
       {/* Bottom menu */}
-      <div className="fixed bottom-0 left-0 w-full bg-gray-800">
+      <div className="fixed bottom-0 left-0 w-full border-t border-gray-700">
         <DBMobileBottomMenu />
       </div>
     </main>

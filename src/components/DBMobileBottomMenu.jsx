@@ -1,57 +1,45 @@
 import { Link } from "react-router-dom";
 
 const DBMobileBottomMenu = () => {
-
   const menus = [
     {
       name: "Home",
       path: "",
-      icon: ""
+      icon: "/icon-home.png",
     },
     {
       name: "Promotions",
       path: "",
-      icon: ""
+      icon: "/icon-promotion.png",
     },
     {
       name: "Deposite",
       path: "",
-      icon: ""
+      icon: "/toolbar-icon-deposit.svg",
     },
     {
       name: "My Account",
       path: "",
-      icon: ""
+      icon: "/icon-promotion.png",
     },
-
-  ]
+  ];
 
   return (
-    <div className="w-full h-[50px]">
-
-      {/* Login Signup Section */}
-      <div className="flex items-center h-full">
-        {/* Currency */}
-        <div className="bg-white w-[30%] h-full flex justify-center items-center gap-1">
-          <img src="/public/BD.png" alt="" className="w-[25px] h-[25px]" />
-          <p className="text-sm flex flex-col lg:flex-row items-center font-medium">
-            BDT <span className="leading-3 lg:leading-none">English</span>
-          </p>
-        </div>
-
-        {/* Login Button */}
-        <div className=" w-[35%] bg-[#46a35e] h-full flex justify-center items-center text-white text-[15px] font-medium">
-          <Link to="">Login</Link>
-        </div>
-
-        {/* SignUp Button */}
-         <div className=" w-[35%] bg-[#ffdf1a] h-full flex justify-center items-center text-[15px] font-medium">
-          <Link to="">Sign Up</Link>
-        </div>
-      </div>
-
-      {/* After Login/ Menu Section */}
-      {/* <div>2</div> */}
+    <div className="w-full h-[50px] px-2">
+      <ul className="h-full">
+        <li className="flex items-center justify-between h-full">
+          {menus.map((menu, idx) => {
+            return (
+              <Link to={menu.path} key={idx} className="flex flex-col items-center justify-center">
+                <span className="w-5 h-5">
+                  <img src={menu.icon} alt="" className="w-full h-full object-cover"/>
+                </span>
+                <span className="text-xs text-white">{menu.name}</span>
+              </Link>
+            );
+          })}
+        </li>
+      </ul>
     </div>
   );
 };
