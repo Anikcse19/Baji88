@@ -6,6 +6,7 @@ import SportsPage from "../pages/Sports";
 import ProfilePage from "../pages/dashboard/ProfilePage";
 import RegistrationPage from "../pages/RegistrationPage";
 import Login from "../pages/Login";
+import RegistrationPageMobile from "../pages/RegistrationPageMobile";
 
 const routes = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const routes = createBrowserRouter([
   {
     path: "/registration",
     element: <RegistrationPage />,
+  },
+  {
+    path: "/sign-up",
+    element: <RegistrationPageMobile />,
   },
   {
     path: "/login",
