@@ -1,0 +1,37 @@
+/* DBHomePageMobileSLider.css */
+/* .DBHomePageMainSlider .slider-container {
+  width: 100%;
+  overflow: hidden;
+} */
+
+.DBHomePageMainSlider .swiper-slide-custom {
+  /* width: 252px; */
+  height: 117px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+ background-color: transparent;
+}
+
+.DBHomePageMainSlider .swiper-slide-custom .slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.DBHomePageMainSlider .swiper-slide-prev,
+.DBHomePageMainSlider .swiper-slide-next {
+  /* opacity: 0.5; 
+  transform: scale(0.8); */
+  width: 25% !important;
+
+}
+
+.DBHomePageMainSlider .swiper-slide-active {
+    width: 50% !important;
+    border-radius: 18px;
+  /* opacity: 1;
+  transform: scale(1); */
+}
