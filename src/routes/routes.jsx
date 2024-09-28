@@ -3,10 +3,10 @@ import { createBrowserRouter } from "react-router-dom";
 import CasinoPage from "../pages/CasinoPage";
 import HomePage from "../pages/HomePage";
 import SportsPage from "../pages/Sports";
-import ProfilePage from "../pages/dashboard/ProfilePage";
 import RegistrationPage from "../pages/RegistrationPage";
 import Login from "../pages/Login";
 import RegistrationPageMobile from "../pages/RegistrationPageMobile";
+import DBDeposite from "../pages/dashboard/DBDeposite";
 
 const routes = createBrowserRouter([
   {
@@ -21,9 +21,10 @@ const routes = createBrowserRouter([
     path: "/sports",
     element: <SportsPage />,
   },
+
   {
-    path: "/profile",
-    element: <ProfilePage />,
+    path: "/deposite",
+    element: <DBDeposite />,
   },
 
   {
