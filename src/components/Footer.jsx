@@ -2,7 +2,7 @@ import ToggleParagraph from "./ToggleParagraph";
 
 const Footer = () => {
   return (
-    <div className="bg-black lg:bg-[#353535] mx-auto">
+    <div className="bg-black lg:bg-[#353535] mx-auto mb-16">
       <ToggleParagraph />
 
       <div className="my-5 w-[75%] mx-auto hidden lg:block">

@@ -6,6 +6,7 @@ import Footer from "../Footer";
 
 import useStore from "../../Zustand/store/useStore";
 import LoginModal from "../Modal/Login";
+import DBMobileBottomMenu from "../DBMobileBottomMenu";
 
 const Layout = ({ children }) => {
   const { isLoginModalopen } = useStore();
@@ -26,6 +27,10 @@ const Layout = ({ children }) => {
         )}
       </div>
       <Footer />
+      {/* Bottom menu */}
+      <div className="fixed bottom-0 left-0 w-full border-t border-gray-700">
+        <DBMobileBottomMenu />
+      </div>
     </div>
   );
 };

@@ -25,14 +25,22 @@ const DBMobileBottomMenu = () => {
   ];
 
   return (
-    <div className="w-full h-[50px] px-2">
+    <div className="w-full h-[50px] px-2 bg-black">
       <ul className="h-full">
         <li className="flex items-center justify-between h-full">
           {menus.map((menu, idx) => {
             return (
-              <Link to={menu.path} key={idx} className="flex flex-col items-center justify-center">
+              <Link
+                to={menu.path}
+                key={idx}
+                className="flex flex-col items-center justify-center"
+              >
                 <span className="w-5 h-5">
-                  <img src={menu.icon} alt="" className="w-full h-full object-cover"/>
+                  <img
+                    src={menu.icon}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
                 </span>
                 <span className="text-xs text-white">{menu.name}</span>
               </Link>
