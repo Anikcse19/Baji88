@@ -24,7 +24,7 @@ export default function DBHomePageMainSlider() {
         centeredSlides={true}  // Ensure center slide is focused
         loop={true}
         grabCursor={true}
-        pagination={false}
+        pagination={true}
         navigation={false}
         autoplay={{
           delay: 2500,

@@ -1,6 +1,9 @@
+/* eslint-disable react/prop-types */
+import { LuUser2 } from "react-icons/lu";
 import { Link } from "react-router-dom";
 
-const DBMobileBottomMenu = () => {
+const DBMobileBottomMenu = ({setMyAccount}) => {
+
   const menus = [
     {
       name: "Home",
@@ -17,16 +20,11 @@ const DBMobileBottomMenu = () => {
       path: "",
       icon: "/toolbar-icon-deposit.svg",
     },
-    {
-      name: "My Account",
-      path: "",
-      icon: "/icon-promotion.png",
-    },
   ];
 
   return (
-    <div className="w-full h-[50px] px-2 bg-black">
-      <ul className="h-full">
+    <div className="w-full h-[50px] px-2 bg-black flex items-center justify-between gap-5">
+      <ul className="w-[75%] h-full">
         <li className="flex items-center justify-between h-full">
           {menus.map((menu, idx) => {
             return (
@@ -48,6 +46,18 @@ const DBMobileBottomMenu = () => {
           })}
         </li>
       </ul>
+
+      <div className="w-[25%] h-full flex items-center justify-end">
+        <button
+          onClick={() => setMyAccount((prev) => !prev)}
+          className="flex flex-col items-center justify-center"
+        >
+          <span className="w-5 h-5 text-white">
+            <LuUser2 />
+          </span>
+          <span className="text-xs text-white">My Account</span>
+        </button>
+      </div>
     </div>
   );
 };

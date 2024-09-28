@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import DBMobileBottomMenu from "../DBMobileBottomMenu";
 import DBMobileNavbar from "../DBMobileNavbar";
 import DBMobileSideMenu from "../DBMobileSideMenu";
 
@@ -27,16 +26,11 @@ const DashboardLayout = ({ children }) => {
         }`}
         onClick={(e) => e.stopPropagation()} // Prevent click inside menu from closing it
       >
-        <DBMobileSideMenu/>
+        <DBMobileSideMenu />
       </div>
 
       {/* Page content */}
       <div className="flex-1">{children}</div>
-
-      {/* Bottom menu */}
-      <div className="fixed bottom-0 left-0 w-full border-t border-gray-700">
-        <DBMobileBottomMenu />
-      </div>
     </main>
   );
 };
