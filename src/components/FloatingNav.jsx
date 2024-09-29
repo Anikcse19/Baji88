@@ -1,6 +1,11 @@
 import { useState } from "react";
 import Exclusive from "./ui/Exclusive";
 import Sport from "./ui/Sport";
+import Casino from "./ui/Casino";
+import Slots from "./ui/Slots";
+import Table from "./ui/Table";
+import Crash from "./ui/Crash";
+import Fishing from "./ui/Fishing";
 
 const FloatingNav = () => {
   const [currentTab, setCurrentTab] = useState("এক্সক্লুসিভ");
@@ -39,8 +44,20 @@ const FloatingNav = () => {
           <div className="py-4">
             {currentTab == "এক্সক্লুসিভ" ? (
               <Exclusive />
+            ) : currentTab == "স্পোর্ট" ? (
+              <Sport />
+            ) : currentTab == "ক্যাসিনো" ? (
+              <Casino />
+            ) : currentTab == "স্লট" ? (
+              <Slots />
+            ) : currentTab == "টেবিল" ? (
+              <Table />
+            ) : currentTab == "ক্রাশ" ? (
+              <Crash />
+            ) : currentTab == "ফিসিং" ? (
+              <Fishing />
             ) : (
-              currentTab == "স্পোর্ট" && <Sport />
+              ""
             )}
           </div>
         </div>

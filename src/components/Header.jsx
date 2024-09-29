@@ -7,13 +7,14 @@ import { BiMenuAltLeft } from "react-icons/bi";
 import { LuMessagesSquare } from "react-icons/lu";
 import { useNavigate } from "react-router-dom";
 import useStore from "../Zustand/store/useStore";
+import MobileNavSlider from "./Slider/MobileNavSlider";
 
 const Header = ({ setSideMenuOpen }) => {
   const navigate = useNavigate();
 
   const { isLoginModalopen, setIsLoginModalOpen } = useStore();
   return (
-    <div>
+    <div className="">
       {/* uper header start */}
       <div className="bg-[#2D2D2D] hidden lg:block">
         <Center>
@@ -77,13 +78,8 @@ const Header = ({ setSideMenuOpen }) => {
                 />
               </div>
               <div>|</div>
-              <div className="flex items-center gap-4">
-                <img
-                  className="w-8 h-8 object-cover"
-                  src="/sunriser.png"
-                  alt=""
-                />
-                <img className="w-8 h-8 object-cover" src="/csk.png" alt="" />
+              <div className="max-w-[100px] max-h-[35px] overflow-hidden">
+                <MobileNavSlider />
               </div>
             </div>
             {/* right */}

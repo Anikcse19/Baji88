@@ -35,7 +35,10 @@ const Layout = ({ children }) => {
 
   return (
     <div className="flex flex-col justify-between">
-      <Header setSideMenuOpen={setSideMenuOpen} />
+      <div className="fixed w-full top-0 z-[999]">
+        <Header setSideMenuOpen={setSideMenuOpen} />
+        <Navbar />
+      </div>
       {/* Overlay for when side menu is open */}
       <div
         className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-10 z-[998] transition-opacity duration-300 lg:hidden  ${
@@ -46,15 +49,14 @@ const Layout = ({ children }) => {
 
       {/* Side Menu */}
       <div
-        className={`fixed top-0 left-0 h-full w-[190px] bg-gray-800 z-[999] transition-transform duration-300 transform ${
+        className={`fixed top-0 left-0 h-full w-[190px] bg-gray-800 z-[999] transition-transform duration-300 transform lg:hidden ${
           sideMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
         onClick={(e) => e.stopPropagation()} // Prevent click inside menu from closing it
       >
         <DBMobileSideMenu />
       </div>
-      <Navbar />
-      <div className="relative">
+      <div className="relative pt-12 lg:pt-36">
         {children}
         {/* login modal */}
         {isLoginModalopen && (

@@ -13,7 +13,7 @@ const Card = () => {
         </p>
         <div className="absolute bottom-0 w-full h-12 bg-gradient-to-t from-gray-900 to-transparent "></div>
       </div>
-      <div className="w-full flex justify-center items-center h-[150px] z-[1000] bg-black bg-opacity-70 absolute -bottom-full group-hover:bottom-0 transition-all duration-200 ease-in">
+      <div className="w-[180px] flex justify-center items-center h-[150px] z-[1000] bg-black bg-opacity-70 absolute -bottom-full group-hover:bottom-0 transition-all duration-200 ease-in">
         <span
           style={{
             background:
