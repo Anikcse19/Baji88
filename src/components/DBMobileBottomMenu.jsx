@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 const DBMobileBottomMenu = ({ setMyAccount }) => {
   const navigate = useNavigate();
-  const user = "anik";
+  const user = "";
   const menus = [
     {
       name: "Home",
@@ -17,8 +17,8 @@ const DBMobileBottomMenu = ({ setMyAccount }) => {
       icon: "/icon-promotion.png",
     },
     {
-      name: "Deposite",
-      path: "",
+      name: "Deposit",
+      path: "/deposit",
       icon: "/toolbar-icon-deposit.svg",
     },
   ];

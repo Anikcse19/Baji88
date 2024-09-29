@@ -67,6 +67,7 @@ const Layout = ({ children }) => {
       </div>
       <Footer />
 
+
       {/* Bottom menu */}
       <div className="fixed bottom-0 left-0 w-full border-t border-gray-700 lg:hidden">
         <DBMobileBottomMenu setMyAccount={setMyAccount} />
@@ -84,6 +85,7 @@ const Layout = ({ children }) => {
           </div>
         )}
       </div>
+      
     </div>
   );
 };
