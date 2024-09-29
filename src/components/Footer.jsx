@@ -56,7 +56,9 @@ const Footer = () => {
 
         <hr />
         {/* sponsorships */}
-        <div className="mt-5"></div>
+        <div className="mt-5">
+          
+        </div>
       </div>
     </div>
   );

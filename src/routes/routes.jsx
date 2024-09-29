@@ -7,6 +7,7 @@ import RegistrationPage from "../pages/RegistrationPage";
 import Login from "../pages/Login";
 import RegistrationPageMobile from "../pages/RegistrationPageMobile";
 import DBDeposite from "../pages/dashboard/DBDeposite";
+import DBWithdraw from "../pages/dashboard/DbWithdraw";
 import ProfilePage from "../pages/dashboard/ProfilePage";
 import SlotPgae from "../pages/SlotPage";
 import TablePage from "../pages/TablePage";
@@ -54,13 +55,18 @@ const routes = createBrowserRouter([
   },
 
   {
-    path: "/deposite",
+    path: "/deposit",
     element: <DBDeposite />,
   },
   {
     path: "/profile",
     element: <ProfilePage />,
   },
+  {
+    path: "/withdraw",
+    element: <DBWithdraw />,
+  },
+
   {
     path: "/registration",
     element: <RegistrationPage />,

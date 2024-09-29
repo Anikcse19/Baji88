@@ -17,8 +17,8 @@ const DBMobileBottomMenu = ({ setMyAccount }) => {
       icon: "/icon-promotion.png",
     },
     {
-      name: "Deposite",
-      path: "",
+      name: "Deposit",
+      path: "/deposit",
       icon: "/toolbar-icon-deposit.svg",
     },
   ];
