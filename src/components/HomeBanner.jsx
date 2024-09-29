@@ -1,38 +1,14 @@
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-
-// import required modules
-import { Pagination } from "swiper/modules";
-
-import "../assets/css/BannerStyles.css";
-
 import { IoVolumeHigh } from "react-icons/io5";
 import { HiOutlineSpeakerphone } from "react-icons/hi";
 
 import SingleSlider from "./Slider/SingleSlider";
+import HeroCarousel from "./Slider/HeroCarousel";
+import "../assets/css/BannerStyles.css";
 
 export default function HomeBanner() {
   return (
     <div className="mb-10">
-      <Swiper
-        spaceBetween={30}
-        loop={true}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
-        className="mySwiper"
-      >
-        {banner.map((b, i) => (
-          <SwiperSlide key={i}>
-            <img src={b} alt="" />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <HeroCarousel elements={banner} />
       <div className="w-full h-8 bg-black lg:bg-[#1c6d51]">
         <div className="w-[95%] lg:w-[85%] mx-auto flex items-center justify-center gap-1 ">
           <IoVolumeHigh className="text-white text-xl hidden lg:block" />

@@ -6,10 +6,10 @@ import FilterGamesStep1 from "../components/ui/FilterGamesStep1";
 import FilterGamesStep2 from "../components/ui/FilterGamesStep2";
 import useStore from "../Zustand/store/useStore";
 
-const CasinoPage = () => {
+const CrashPage = () => {
   const { currentFilterGameStep } = useStore();
 
-  const images = ["casinoBanner.jpg"];
+  const images = ["crushBanner.jpg"];
   return (
     <Layout>
       <HeroCarousel elements={images} />
@@ -60,4 +60,4 @@ const CasinoPage = () => {
   );
 };
 
-export default CasinoPage;
+export default CrashPage;

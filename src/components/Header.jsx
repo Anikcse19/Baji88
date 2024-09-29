@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Center from "./Center";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
@@ -6,13 +7,14 @@ import { BiMenuAltLeft } from "react-icons/bi";
 import { LuMessagesSquare } from "react-icons/lu";
 import { useNavigate } from "react-router-dom";
 import useStore from "../Zustand/store/useStore";
+import MobileNavSlider from "./Slider/MobileNavSlider";
 
-const Header = () => {
+const Header = ({ setSideMenuOpen }) => {
   const navigate = useNavigate();
 
   const { isLoginModalopen, setIsLoginModalOpen } = useStore();
   return (
-    <div>
+    <div className="">
       {/* uper header start */}
       <div className="bg-[#2D2D2D] hidden lg:block">
         <Center>
@@ -64,7 +66,10 @@ const Header = () => {
           <div className="flex items-center justify-between py-2 px-2">
             {/* left */}
             <div className="flex items-center gap-2 lg:gap-5">
-              <BiMenuAltLeft className="lg:hidden text-green-700 text-3xl" />
+              <BiMenuAltLeft
+                onClick={() => setSideMenuOpen((prev) => !prev)}
+                className="lg:hidden text-green-700 text-3xl"
+              />
               <div onClick={() => navigate("/")} className="">
                 <img
                   className="w-[70px] lg:w-[120px] h-[30px] lg:h-[50px] cursor-pointer"
@@ -73,13 +78,8 @@ const Header = () => {
                 />
               </div>
               <div>|</div>
-              <div className="flex items-center gap-4">
-                <img
-                  className="w-8 h-8 object-cover"
-                  src="/sunriser.png"
-                  alt=""
-                />
-                <img className="w-8 h-8 object-cover" src="/csk.png" alt="" />
+              <div className="max-w-[100px] max-h-[35px] overflow-hidden">
+                <MobileNavSlider />
               </div>
             </div>
             {/* right */}

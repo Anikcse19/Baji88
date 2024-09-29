@@ -1,12 +1,14 @@
 import { RiArrowLeftSLine } from "react-icons/ri";
 import { FaEyeSlash } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
   return (
     <div>
       {/* back button */}
       <div className="flex items-center bg-[#333333] px-3 py-3">
-        <div>
+        <div onClick={() => navigate("/")}>
           <RiArrowLeftSLine className="text-2xl text-white" />
         </div>
         <div className="flex-grow flex justify-center items-center">
@@ -52,6 +54,10 @@ const Login = () => {
           <p className="p-1 border border-teal-600 text-teal-600 rounded-sm">
             Forgot Password?
           </p>
+        </div>
+        {/* login button */}
+        <div className="bg-teal-500 py-3 rounded flex items-center justify-center">
+          <p className="text-white">Login</p>
         </div>
       </div>
     </div>

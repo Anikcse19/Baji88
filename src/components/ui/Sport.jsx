@@ -15,7 +15,7 @@ const Sport = () => {
               />
             </span>
             <span className="flex justify-center">
-              <p>{element.title}</p>
+              <p className="text-white text-sm">{element.title}</p>
             </span>
           </div>
         </div>

@@ -5,8 +5,16 @@ import HomePage from "../pages/HomePage";
 import SportsPage from "../pages/Sports";
 import RegistrationPage from "../pages/RegistrationPage";
 import Login from "../pages/Login";
+import RegistrationPageMobile from "../pages/RegistrationPageMobile";
 import DBDeposite from "../pages/dashboard/DBDeposite";
 import DBWithdraw from "../pages/dashboard/DbWithdraw";
+import ProfilePage from "../pages/dashboard/ProfilePage";
+import SlotPgae from "../pages/SlotPage";
+import TablePage from "../pages/TablePage";
+import FishingPage from "../pages/FishingPage";
+import CrashPage from "../pages/CrashPage";
+import ArcadePage from "../pages/ArcadePage";
+import LotteryPage from "../pages/LotteryPage";
 
 const routes = createBrowserRouter([
   {
@@ -18,6 +26,30 @@ const routes = createBrowserRouter([
     element: <CasinoPage />,
   },
   {
+    path: "/slot",
+    element: <SlotPgae />,
+  },
+  {
+    path: "/table",
+    element: <TablePage />,
+  },
+  {
+    path: "/fishing",
+    element: <FishingPage />,
+  },
+  {
+    path: "/crash",
+    element: <CrashPage />,
+  },
+  {
+    path: "/arcade",
+    element: <ArcadePage />,
+  },
+  {
+    path: "/lottery",
+    element: <LotteryPage />,
+  },
+  {
     path: "/sports",
     element: <SportsPage />,
   },
@@ -26,7 +58,10 @@ const routes = createBrowserRouter([
     path: "/deposit",
     element: <DBDeposite />,
   },
-
+  {
+    path: "/profile",
+    element: <ProfilePage />,
+  },
   {
     path: "/withdraw",
     element: <DBWithdraw />,
@@ -35,6 +70,10 @@ const routes = createBrowserRouter([
   {
     path: "/registration",
     element: <RegistrationPage />,
+  },
+  {
+    path: "/sign-up",
+    element: <RegistrationPageMobile />,
   },
   {
     path: "/login",

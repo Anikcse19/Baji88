@@ -99,7 +99,7 @@ const navItems = [
   {
     id: 6,
     title: "ক্রাশ",
-    link: "/crush",
+    link: "/crash",
   },
   {
     id: 7,

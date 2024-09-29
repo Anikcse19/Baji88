@@ -7,37 +7,56 @@ import Footer from "../Footer";
 import useStore from "../../Zustand/store/useStore";
 import LoginModal from "../Modal/Login";
 import DBMobileBottomMenu from "../DBMobileBottomMenu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DBMyAccount from "../../pages/dashboard/DBMyAccount";
+import DBMobileSideMenu from "../DBMobileSideMenu";
 
 const Layout = ({ children }) => {
   const { isLoginModalopen } = useStore();
   const [myAccount, setMyAccount] = useState(false);
-  
-    // Effect to control body scroll based on myAccount state
-    // useEffect(() => {
-    //   if (myAccount) {
-    //     // Disable scrolling on the body when the "My Account" menu is open
-    //     document.body.style.overflow = "hidden";
-    //   } else {
-    //     // Re-enable scrolling when the "My Account" menu is closed
-    //     document.body.style.overflow = "auto";
-    //   }
-  
-    //   return () => {
-    //     document.body.style.overflow = "auto";
-    //   };
-    // }, [myAccount]);
-  
+  const [sideMenuOpen, setSideMenuOpen] = useState(false);
+
+  // Effect to control body scroll based on myAccount state
+  useEffect(() => {
+    if (myAccount) {
+      // Disable scrolling on the body when the "My Account" menu is open
+      document.body.style.overflow = "hidden";
+    } else {
+      // Re-enable scrolling when the "My Account" menu is closed
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [myAccount]);
 
   console.log("s", isLoginModalopen);
 
   return (
-    <div className="flex flex-col justify-between relative">
+    <div className="flex flex-col justify-between">
+      <div className="fixed w-full top-0 z-[999]">
+        <Header setSideMenuOpen={setSideMenuOpen} />
+        <Navbar />
+      </div>
+      {/* Overlay for when side menu is open */}
+      <div
+        className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-10 z-[998] transition-opacity duration-300 lg:hidden  ${
+          sideMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setSideMenuOpen(false)} // Close menu on clicking outside
+      ></div>
 
-      <Header />
-      <Navbar />
-      <div className="relative">
+      {/* Side Menu */}
+      <div
+        className={`fixed top-0 left-0 h-full w-[190px] bg-gray-800 z-[999] transition-transform duration-300 transform lg:hidden ${
+          sideMenuOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+        onClick={(e) => e.stopPropagation()} // Prevent click inside menu from closing it
+      >
+        <DBMobileSideMenu />
+      </div>
+      <div className="relative pt-12 lg:pt-36">
         {children}
         {/* login modal */}
         {isLoginModalopen && (
@@ -55,12 +74,16 @@ const Layout = ({ children }) => {
       </div>
 
       {/* My Account Menu */}
-      <div className={`bg-red-500 w-full absolute bottom-0 z-[9999] transition-all ease-in-out duration-300 
-      ${ myAccount ? "h-full" : "h-0"} overflow-y-auto`}>
-        {
-          myAccount &&
-          <DBMyAccount setMyAccount={setMyAccount} /> 
-        }
+      <div>
+        {myAccount && (
+          <div
+            className={`bg-black w-full h-full fixed top-0 left-0 z-[999] transition-transform duration-300 ${
+              myAccount ? "translate-y-0" : "translate-y-full"
+            } overflow-y-auto`} // Allows scrolling inside My Account
+          >
+            <DBMyAccount setMyAccount={setMyAccount} />
+          </div>
+        )}
       </div>
       
     </div>

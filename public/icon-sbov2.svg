@@ -16,9 +16,9 @@
     </defs>
     <g id="provider/icon/sbo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="sbo">
-            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
-            <use fill="#222222" fill-rule="evenodd" xlink:href="#path-1"></use>
-            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+            <use fill="yellow" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <use fill="yellow" fill-rule="evenodd" xlink:href="#path-1"></use>
+            <use fill="yellow" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
         </g>
     </g>
 </svg>
