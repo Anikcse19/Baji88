@@ -10,8 +10,6 @@ const RegistrationFormTwo = () => {
   const generatedNumbers = new Set();
 
   function generateUnique4DigitNumber() {
-    console.log("click");
-
     let uniqueNumber;
 
     // Keep generating until a unique 4-digit number is found

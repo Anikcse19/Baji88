@@ -7,6 +7,7 @@ import RegistrationPage from "../pages/RegistrationPage";
 import Login from "../pages/Login";
 import RegistrationPageMobile from "../pages/RegistrationPageMobile";
 import DBDeposite from "../pages/dashboard/DBDeposite";
+import ProfilePage from "../pages/dashboard/ProfilePage";
 
 const routes = createBrowserRouter([
   {
@@ -26,7 +27,10 @@ const routes = createBrowserRouter([
     path: "/deposite",
     element: <DBDeposite />,
   },
-
+  {
+    path: "/profile",
+    element: <ProfilePage />,
+  },
   {
     path: "/registration",
     element: <RegistrationPage />,

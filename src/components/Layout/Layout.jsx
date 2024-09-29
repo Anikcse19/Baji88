@@ -9,10 +9,12 @@ import LoginModal from "../Modal/Login";
 import DBMobileBottomMenu from "../DBMobileBottomMenu";
 import { useEffect, useState } from "react";
 import DBMyAccount from "../../pages/dashboard/DBMyAccount";
+import DBMobileSideMenu from "../DBMobileSideMenu";
 
 const Layout = ({ children }) => {
   const { isLoginModalopen } = useStore();
   const [myAccount, setMyAccount] = useState(false);
+  const [sideMenuOpen, setSideMenuOpen] = useState(false);
 
   // Effect to control body scroll based on myAccount state
   useEffect(() => {
@@ -33,7 +35,24 @@ const Layout = ({ children }) => {
 
   return (
     <div className="flex flex-col justify-between">
-      <Header />
+      <Header setSideMenuOpen={setSideMenuOpen} />
+      {/* Overlay for when side menu is open */}
+      <div
+        className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-10 z-[998] transition-opacity duration-300 lg:hidden  ${
+          sideMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setSideMenuOpen(false)} // Close menu on clicking outside
+      ></div>
+
+      {/* Side Menu */}
+      <div
+        className={`fixed top-0 left-0 h-full w-[190px] bg-gray-800 z-[999] transition-transform duration-300 transform ${
+          sideMenuOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+        onClick={(e) => e.stopPropagation()} // Prevent click inside menu from closing it
+      >
+        <DBMobileSideMenu />
+      </div>
       <Navbar />
       <div className="relative">
         {children}
@@ -55,7 +74,7 @@ const Layout = ({ children }) => {
       <div>
         {myAccount && (
           <div
-            className={`bg-black w-full h-full absolute top-0 left-0 z-[999] transition-transform duration-300 ${
+            className={`bg-black w-full h-full fixed top-0 left-0 z-[999] transition-transform duration-300 ${
               myAccount ? "translate-y-0" : "translate-y-full"
             } overflow-y-auto`} // Allows scrolling inside My Account
           >

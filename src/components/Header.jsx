@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Center from "./Center";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
@@ -7,7 +8,7 @@ import { LuMessagesSquare } from "react-icons/lu";
 import { useNavigate } from "react-router-dom";
 import useStore from "../Zustand/store/useStore";
 
-const Header = () => {
+const Header = ({ setSideMenuOpen }) => {
   const navigate = useNavigate();
 
   const { isLoginModalopen, setIsLoginModalOpen } = useStore();
@@ -64,7 +65,10 @@ const Header = () => {
           <div className="flex items-center justify-between py-2 px-2">
             {/* left */}
             <div className="flex items-center gap-2 lg:gap-5">
-              <BiMenuAltLeft className="lg:hidden text-green-700 text-3xl" />
+              <BiMenuAltLeft
+                onClick={() => setSideMenuOpen((prev) => !prev)}
+                className="lg:hidden text-green-700 text-3xl"
+              />
               <div onClick={() => navigate("/")} className="">
                 <img
                   className="w-[70px] lg:w-[120px] h-[30px] lg:h-[50px] cursor-pointer"

@@ -101,7 +101,7 @@ const DBMobileSideMenu = () => {
   ];
 
   return (
-    <div className="w-[190px] bg-[#111111] h-screen overflow-y-auto">
+    <div className="w-[190px] bg-[#111111] h-screen overflow-y-auto lg:hidden">
       {/* Logo + Main Menu */}
       <div className="bg-[#252525] px-2 pt-2 border-b border-gray-600">
         {/* Logo Section */}
