@@ -16,14 +16,15 @@ const DBMobileBottomMenu = ({setMyAccount}) => {
       icon: "/icon-promotion.png",
     },
     {
-      name: "Deposite",
-      path: "",
+      name: "Deposit",
+      path: "/deposit",
       icon: "/toolbar-icon-deposit.svg",
     },
   ];
 
   return (
     <div className="w-full h-[50px] px-2 bg-black flex items-center justify-between gap-5">
+
       <ul className="w-[75%] h-full">
         <li className="flex items-center justify-between h-full">
           {menus.map((menu, idx) => {
@@ -58,6 +59,7 @@ const DBMobileBottomMenu = ({setMyAccount}) => {
           <span className="text-xs text-white">My Account</span>
         </button>
       </div>
+      
     </div>
   );
 };

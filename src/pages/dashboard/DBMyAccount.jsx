@@ -67,8 +67,8 @@ const DBMyAccount = ({ setMyAccount }) => {
           <MyAccountTitle>Funds</MyAccountTitle>
 
           <div className="w-full flex items-center justify-around p-2">
-            <MyAccountBtns url="/deposite" imgUrl="/icon-deposit.png">Deposite</MyAccountBtns>
-            <MyAccountBtns imgUrl="/icon-withdrawal.png">Withdraw</MyAccountBtns>
+            <MyAccountBtns url="/deposit" imgUrl="/icon-deposit.png">Deposite</MyAccountBtns>
+            <MyAccountBtns url="/withdraw" imgUrl="/icon-withdrawal.png">Withdraw</MyAccountBtns>
           </div>
         </div>
 

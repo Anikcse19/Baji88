@@ -6,6 +6,7 @@ import SportsPage from "../pages/Sports";
 import RegistrationPage from "../pages/RegistrationPage";
 import Login from "../pages/Login";
 import DBDeposite from "../pages/dashboard/DBDeposite";
+import DBWithdraw from "../pages/dashboard/DbWithdraw";
 
 const routes = createBrowserRouter([
   {
@@ -22,8 +23,13 @@ const routes = createBrowserRouter([
   },
 
   {
-    path: "/deposite",
+    path: "/deposit",
     element: <DBDeposite />,
+  },
+
+  {
+    path: "/withdraw",
+    element: <DBWithdraw />,
   },
 
   {
