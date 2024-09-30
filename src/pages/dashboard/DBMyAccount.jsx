@@ -81,12 +81,12 @@ const DBMyAccount = ({ setMyAccount }) => {
               Betting Records
             </MyAccountBtns>
 
-            <MyAccountBtns imgUrl="/public/icon-turnover.png">
+            <MyAccountBtns imgUrl="/icon-turnover.png">
               Turnover
             </MyAccountBtns>
 
             <MyAccountBtns
-              imgUrl="/public/icon-records.png"
+              imgUrl="/icon-records.png"
               className="flex flex-col leading-4"
             >
               <span className="">Transaction</span>
