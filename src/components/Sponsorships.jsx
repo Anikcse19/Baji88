@@ -3,22 +3,22 @@ const Sponsorships = () => {
     {
       title: "Bologna FC 1909",
       des: "Betting Partner",
-      img: "/public/bologna-fc-1909.png",
+      img: "/bologna-fc-1909.png",
     },
     {
       title: "Quetta Gladiators",
       des: "Titanium Sponsor",
-      img: "/public/quetta-gladiators.png",
+      img: "/quetta-gladiators.png",
     },
     {
       title: "Sunrisers Eastern Cape",
       des: "Titanium Sponsor",
-      img: "/public/sunrisers-eastern-cape.png",
+      img: "/sunrisers-eastern-cape.png",
     },
     {
       title: "Deccan Gladiators",
       des: "Titanium Sponsor",
-      img: "/public/deccan-gladiators.png",
+      img: "/deccan-gladiators.png",
     },
   ];
   return (

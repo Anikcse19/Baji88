@@ -10,7 +10,7 @@ const ResponsibleGaming = () => {
 
       <div className="flex items-center mt-3 gap-4 md:gap-7">
         <img
-          src="/public/safe1.png"
+          src="/safe1.png"
           alt=""
           className="w-6 h-6 opacity-60 hover:opacity-100"
         />

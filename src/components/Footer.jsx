@@ -88,10 +88,10 @@ const Footer = () => {
         <hr className=" mt-10 opacity-10" />
         <div className="md: my-4">
           <p className="text-[13px]  font-bold md:font-normal text-[#14805e] md:text-white">
-            Brand Ambassadors
+            Gamming Licence
           </p>
           <img
-            src="/public/gaming_license.png"
+            src="/gaming_license.png"
             alt=""
             className="h-[25px] mt-3"
           />

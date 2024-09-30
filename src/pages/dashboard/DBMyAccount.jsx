@@ -100,16 +100,17 @@ const DBMyAccount = ({ setMyAccount }) => {
           <MyAccountTitle>Profile</MyAccountTitle>
 
           <div className="w-full flex items-center justify-between p-2">
-            <MyAccountBtns imgUrl="/icon-profile.png">Personal Info</MyAccountBtns>
+            <MyAccountBtns url="/profile" imgUrl="/icon-profile.png">Personal Info</MyAccountBtns>
 
             <MyAccountBtns
+            url="/change-password"
               imgUrl="/icon-resetpasswords.png"
               className="flex flex-col leading-3 max-w-[80px]"
             >
               Reset password
             </MyAccountBtns>
 
-            <MyAccountBtns imgUrl="/icon-inbox.png">Inbox</MyAccountBtns>
+            <MyAccountBtns url="/inbox" imgUrl="/icon-inbox.png">Inbox</MyAccountBtns>
 
             <MyAccountBtns imgUrl="/icon-referral.png">Referral</MyAccountBtns>
           </div>

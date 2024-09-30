@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 const DBMobileBottomMenu = ({ setMyAccount }) => {
   const navigate = useNavigate();
-  const user = "test";
+  const user = "";
   const menus = [
     {
       name: "Home",
