@@ -7,8 +7,8 @@ import { Autoplay, Navigation } from "swiper/modules";
 
 const images = [
   "/fc-logo.png",
-  "/public/deccan-gladiators.png",
-  "/public/sunriser.png",
+  "/deccan-gladiators.png",
+  "/sunriser.png",
 ];
 
 export default function MobileNavSlider() {
