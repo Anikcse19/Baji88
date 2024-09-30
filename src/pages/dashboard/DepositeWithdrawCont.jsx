@@ -1,8 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
-import { BsChatLeftText } from "react-icons/bs";
-import { IoIosArrowBack } from "react-icons/io";
 import { Link, useLocation } from "react-router-dom";
+import CommonNav from "../../utils/CommonNav";
 
 const DepositeWithdrawCont = ({ children }) => {
   const { pathname } = useLocation();
@@ -16,22 +15,12 @@ const DepositeWithdrawCont = ({ children }) => {
     <div>
       {/* Deposite, Withdraw, Select Promotion */}
       <div className="bg-[#14805e] pb-4">
-        <div className="flex items-center justify-between text-white py-2 px-3">
-          <Link to="/">
-            <IoIosArrowBack className="text-[26px]" />
-          </Link>
-          <p>Funds</p>
-
-          <button>
-            <BsChatLeftText className="w-4 h-4" />
-          </button>
-        </div>
+        <CommonNav>Funds</CommonNav>
 
         {/* Deposite and Withdraw Buttons */}
         <div className="mt-4 w-full flex justify-center items-center px-4">
           <Link
             to="/deposit"
-            // onClick={() => handleToggle("deposite")}
             className={`${
               toggle === "/deposit"
                 ? "bg-[#34af83] h-[35px]"
@@ -43,7 +32,6 @@ const DepositeWithdrawCont = ({ children }) => {
 
           <Link
             to="/withdraw"
-            // onClick={() => handleToggle("withdraw")}
             className={`${
               toggle === "/withdraw"
                 ? "bg-[#34af83] h-[35px]"

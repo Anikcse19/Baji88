@@ -5,7 +5,7 @@ const BottomContent = () => {
     <div className="mt-10 flex gap-5 md:justify-between items-center">
       <div className="border-r border-gray-500 w-max">
         <img
-          src="/public/logo.png"
+          src="/logo.png"
           alt=""
           className="w-[70px] md:w-[100px] h-[40px] md:h-[50px] borde"
         />

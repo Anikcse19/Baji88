@@ -42,7 +42,7 @@ const BrandAmbassadors = () => {
         </p>
 
         <div className="mt-3">
-          <img src="/public/gaming_license.png" alt="" className="h-[25px]" />
+          <img src="/gaming_license.png" alt="" className="h-[25px]" />
         </div>
       </div>
     </div>

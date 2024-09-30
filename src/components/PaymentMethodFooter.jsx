@@ -1,41 +1,41 @@
 const PaymentMethodFooter = () => {
   const paymentMethods = [
     {
-      icon: "/public/pay16.png",
+      icon: "/pay16.png",
     },
     {
-      icon: "/public/pay22.png",
+      icon: "/pay22.png",
     },
     {
-      icon: "/public/pay33.png",
+      icon: "/pay33.png",
     },
     {
-      icon: "/public/pay34.png",
+      icon: "/pay34.png",
     },
     {
-      icon: "/public/pay34.png",
+      icon: "/pay34.png",
     },
     {
-      icon: "/public/pay47.png",
+      icon: "/pay47.png",
     },
     {
-      icon: "/public/pay59.png",
+      icon: "/pay59.png",
     },
     {
-      icon: "/public/pay60.png",
+      icon: "/pay60.png",
     },
     {
-      icon: "/public/pay61.png",
+      icon: "/pay61.png",
     },
     {
-      icon: "/public/pay91.png",
+      icon: "/pay91.png",
     },
   ];
 
   return (
     <div className="mt-10 md:mt-0 w-[86%]">
       <p className="text-[13px] font-bold md:font-normal text-[#14805e] md:text-white">
-      Payment Methods
+        Payment Methods
       </p>
 
       <div className="flex flex-wrap gap-4 items-center mt-3 md:justify-between">

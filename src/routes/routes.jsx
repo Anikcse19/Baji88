@@ -7,7 +7,6 @@ import RegistrationPage from "../pages/RegistrationPage";
 import Login from "../pages/Login";
 import RegistrationPageMobile from "../pages/RegistrationPageMobile";
 import DBDeposite from "../pages/dashboard/DBDeposite";
-import ProfilePage from "../pages/dashboard/ProfilePage";
 import SlotPgae from "../pages/SlotPage";
 import TablePage from "../pages/TablePage";
 import FishingPage from "../pages/FishingPage";
@@ -15,6 +14,9 @@ import CrashPage from "../pages/CrashPage";
 import ArcadePage from "../pages/ArcadePage";
 import LotteryPage from "../pages/LotteryPage";
 import DBWithdraw from "../pages/dashboard/DBWithdraw";
+import DBProfile from "../pages/dashboard/DBProfile";
+import DBChangePassword from "../pages/dashboard/DBChangePassword";
+import DBInbox from "../pages/dashboard/DBInbox";
 
 const routes = createBrowserRouter([
   {
@@ -59,12 +61,20 @@ const routes = createBrowserRouter([
     element: <DBDeposite />,
   },
   {
-    path: "/profile",
-    element: <ProfilePage />,
-  },
-  {
     path: "/withdraw",
     element: <DBWithdraw />,
+  },
+  {
+    path: "/profile",
+    element: <DBProfile />,
+  },
+  {
+    path: "/change-password",
+    element: <DBChangePassword />,
+  },
+  {
+    path: "/inbox",
+    element: <DBInbox />,
   },
 
   {
