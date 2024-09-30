@@ -56,6 +56,7 @@ const Layout = ({ children }) => {
       >
         <DBMobileSideMenu />
       </div>
+      
       <div className="relative pt-12 lg:pt-36">
         {children}
         {/* login modal */}
@@ -65,8 +66,8 @@ const Layout = ({ children }) => {
           </div>
         )}
       </div>
-      <Footer />
 
+      <Footer />
 
       {/* Bottom menu */}
       <div className="fixed bottom-0 left-0 w-full border-t border-gray-700 lg:hidden">
@@ -85,7 +86,6 @@ const Layout = ({ children }) => {
           </div>
         )}
       </div>
-      
     </div>
   );
 };
