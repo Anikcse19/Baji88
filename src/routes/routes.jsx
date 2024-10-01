@@ -17,6 +17,7 @@ import DBWithdraw from "../pages/dashboard/DBWithdraw";
 import DBProfile from "../pages/dashboard/DBProfile";
 import DBChangePassword from "../pages/dashboard/DBChangePassword";
 import DBInbox from "../pages/dashboard/DBInbox";
+import BettingHistory from "../pages/dashboard/BettingHistory";
 
 const routes = createBrowserRouter([
   {
@@ -75,6 +76,10 @@ const routes = createBrowserRouter([
   {
     path: "/inbox",
     element: <DBInbox />,
+  },
+  {
+    path: "/user-panel/betting-history",
+    element: <BettingHistory />,
   },
 
   {

@@ -8,7 +8,7 @@ import ToggleParagraph from "./ToggleParagraph";
 
 const Footer = () => {
   return (
-    <div className="bg-black lg:bg-[#353535] mx-auto mb-16">
+    <div className="bg-black lg:bg-[#353535] mx-auto ">
       <ToggleParagraph />
 
       <div className="my-5 w-[75%] mx-auto hidden lg:block">
@@ -90,11 +90,7 @@ const Footer = () => {
           <p className="text-[13px]  font-bold md:font-normal text-[#14805e] md:text-white">
             Gamming Licence
           </p>
-          <img
-            src="/gaming_license.png"
-            alt=""
-            className="h-[25px] mt-3"
-          />
+          <img src="/gaming_license.png" alt="" className="h-[25px] mt-3" />
         </div>
         <hr className="opacity-10" />
 

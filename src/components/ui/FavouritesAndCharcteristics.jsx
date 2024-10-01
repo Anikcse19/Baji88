@@ -16,7 +16,7 @@ const FavouritesAndCharcteristics = () => {
                       boxShadow:
                         "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
                     }}
-                    className="min-w-[300px] h-[200px] rounded-md"
+                    className="min-w-[300px] h-[170px] rounded-md"
                     key={f}
                   >
                     <img className="w-full h-full rounded-md" src={f} alt="" />
@@ -45,8 +45,10 @@ const FavouritesAndCharcteristics = () => {
                       src={f.img}
                       alt=""
                     />
-                    <p className="text-white font-bold uppercase text-lg">
-                      {f.title}
+                    <p className="text-white   text-lg">
+                      {f.title.length > 15
+                        ? `${f.title.slice(0, 15)}...`
+                        : f.title}
                     </p>
                   </div>
                 ))}

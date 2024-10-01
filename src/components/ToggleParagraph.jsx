@@ -8,7 +8,7 @@ export default function ToggleParagraph() {
   };
 
   return (
-    <div className="w-full  pt-10 ">
+    <div className="w-full pt-2 lg:pt-10 ">
       <div className="w-full lg:w-[75%] mx-auto py-2 lg:py-10 px-3 lg:px-0">
         <div
           className={`relative overflow-hidden transition-all duration-100 ease-in ${
@@ -17,12 +17,12 @@ export default function ToggleParagraph() {
         >
           <div className={`text-lg leading-7 text-gray-400`}>
             {/* Your long paragraph goes here */}
-            <h1 className="text-gray-200">
+            <h1 className="text-gray-200 text-xs lg:text-base">
               {" "}
               Baji বাংলাদেশ - বাংলাদেশের শীর্ষস্থানীয় অনলাইন গেমিং এবং বেটিং
               প্ল্যাটফর্ম
             </h1>
-            <p className="text-sm py-3">
+            <p className="text-[8px] leading-[1.5] lg:text-sm py-3">
               বাংলাদেশে অনলাইন গেমিংয়ের জনপ্রিয়তা বৃদ্ধি পাচ্ছে, এবং যারা
               তাদের ঘরের আরাম থেকে ক্যাসিনো গেমের রোমাঞ্চ উপভোগ করতে চান, তাদের
               জন্য একটি নির্ভরযোগ্য এবং উত্তেজনাপূর্ণ অনলাইন ক্যাসিনো
@@ -33,10 +33,10 @@ export default function ToggleParagraph() {
               লাইভ ডিলার গেম, বা স্পোর্টস বেটিংয়ের ভক্ত হন, আমাদের কাছে সবার
               জন্য কিছু না কিছু আছে।
             </p>
-            <p className="text-base font-bold pt-8">
+            <p className="text-xs lg:text-base font-bold pt-2 lg:pt-8">
               শীর্ষ প্রদানকারীদের থেকে বিস্তৃত গেম নির্বাচন
             </p>
-            <p className="text-sm">
+            <p className="text-[8px] leading-[1.5] lg:text-sm">
               আমাদের অনলাইন ক্যাসিনোতে, আমরা আমাদের গেমগুলির বৈচিত্র্য এবং
               গুণমান নিয়ে গর্ব করি। আমরা ইন্ডাস্ট্রির কিছু সুপরিচিত গেম
               প্রদানকারীর সাথে অংশীদারিত্ব করেছি যাতে আমাদের খেলোয়াড়রা সেরা
@@ -44,7 +44,7 @@ export default function ToggleParagraph() {
               নতুন, আমাদের প্ল্যাটফর্ম এমন গেম অফার করে যা সব রকমের স্বাদ এবং
               পছন্দকে পূরণ করে।
             </p>
-            <p className="pt-8 text-sm">
+            <p className="pt-3 lg:pt-8 text-[8px] leading-[1.5] lg:text-sm">
               আমাদের শীর্ষ প্রদানকারীদের মধ্যে রয়েছে Microgaming, যা তার
               উচ্চ-মানের স্লট এবং প্রগ্রেসিভ জ্যাকপট গেমগুলির জন্য পরিচিত। আপনি
               যদি স্পোর্টস বেটিংয়ের ভক্ত হন, SABA Sports এবং SBO Sports ফুটবল,
@@ -54,7 +54,7 @@ export default function ToggleParagraph() {
               এবং JDB বিভিন্ন স্লট গেম সরবরাহ করে যা উত্তেজনাপূর্ণ থিম এবং
               বৈশিষ্ট্যযুক্ত।
             </p>
-            <p className="pt-8 text-sm">
+            <p className="pt-2 lg:pt-8 text-[8px] leading-[1.5] lg:text-sm">
               আমাদের প্ল্যাটফর্মটি একটি অসাধারণ লাইভ ক্যাসিনো অভিজ্ঞতা অফার করে,
               যা ইন্ডাস্ট্রি লিডার Evo এবং Big Gaming দ্বারা চালিত।
               ব্ল্যাকজ্যাক, রুলেট এবং ব্যাকারাটের মতো লাইভ ডিলার গেমগুলির
@@ -63,16 +63,16 @@ export default function ToggleParagraph() {
               নিমজ্জিত অভিজ্ঞতা প্রদান করে যা একটি ল্যান্ড-ভিত্তিক ক্যাসিনোর
               সাথে প্রতিযোগিতা করে।
             </p>
-            <p className="pt-8 text-sm">
+            <p className="pt-2 lg:pt-8 text-[8px] leading-[1.5] lg:text-sm">
               কার্ড গেমের অনুরাগীদের জন্য, আমরা BPOKER, KA, এবং WM-এর মতো
               প্রদানকারীদের থেকে বিভিন্ন বিকল্প অফার করি। এছাড়াও, সাধারণ
               গেমাররা LUDO এবং So De-এর মতো সহজ কিন্তু অত্যন্ত আকর্ষণীয় গেম
               উপভোগ করতে পারেন, যা একটি দ্রুত গেমিং সেশনের জন্য উপযুক্ত।
             </p>
-            <p className="text-base font-bold pt-8">
+            <p className="text-xs lg:text-base font-bold pt-3 lg:pt-8">
               এক্সক্লুসিভ গেম এবং উদীয়মান প্রদানকারী
             </p>
-            <p className="text-sm">
+            <p className="text-[8px] leading-[1.5] lg:text-sm">
               আমাদের প্ল্যাটফর্মটি উদীয়মান প্রদানকারীদের নতুন এবং উত্তেজনাপূর্ণ
               শিরোনামগুলি অন্তর্ভুক্ত করতে তার গেম লাইব্রেরি ক্রমাগত প্রসারিত
               করছে। আমরা Sexy, RT, SG, KM, JILI, P8, FC, PP, এবং PT-এর মতো
@@ -92,10 +92,10 @@ export default function ToggleParagraph() {
               প্রদানকারীরা দ্রুত-গতির গেমগুলিতে বিশেষজ্ঞ যা তাদের জন্য উপযুক্ত
               যারা দ্রুত রাউন্ড এবং তাৎক্ষণিক পুরস্কার পছন্দ করেন।
             </p>
-            <p className="text-base font-bold pt-8">
+            <p className="text-xs lg:text-base font-bold pt-2 lg:pt-8">
               কেন আমাদের অনলাইন ক্যাসিনো বেছে নেবেন?
             </p>
-            <p className="text-sm">
+            <p className="text-[8px] leading-[1.5] lg:text-sm">
               বাংলাদেশে চূড়ান্ত অনলাইন গেমিং অভিজ্ঞতা প্রদান করার জন্য আমাদের
               প্ল্যাটফর্মটি ডিজাইন করা হয়েছে। আমরা নিরাপত্তা, সুরক্ষা, এবং
               ন্যায়নিষ্ঠতাকে অগ্রাধিকার দিই, নিশ্চিত করি যে আমাদের সমস্ত গেম
@@ -108,10 +108,10 @@ export default function ToggleParagraph() {
               একটি ডেস্কটপ বা মোবাইল ডিভাইসে খেলছেন, আমাদের প্ল্যাটফর্মটি মসৃণ
               এবং নির্বিঘ্ন গেমপ্লের জন্য অপ্টিমাইজ করা হয়েছে।
             </p>
-            <p className="text-base font-bold pt-8">
+            <p className="text-xs lg:text-base font-bold pt-3 lg:pt-8">
               আমাদের সাথে যোগ দিন এবং পুরস্কার অর্জন করুন
             </p>
-            <p className="text-sm">
+            <p className="text-[8px] leading-[1.5] lg:text-sm">
               যখন আপনি আমাদের সাথে সাইন আপ করবেন, আপনি শুধুমাত্র একটি
               শীর্ষ-স্তরের অনলাইন ক্যাসিনোতে অ্যাক্সেস পাচ্ছেন না - আপনি এমন
               খেলোয়াড়দের একটি সম্প্রদায়ে যোগ দিচ্ছেন যারা এক্সক্লুসিভ বোনাস
@@ -126,8 +126,10 @@ export default function ToggleParagraph() {
               আপনি একটি রেফারেল বোনাস পাবেন। এটি আপনার ব্যাংক রোল বাড়ানোর এবং
               অন্যদের সাথে উত্তেজনা ভাগ করার একটি সহজ উপায়।
             </p>
-            <p className="text-base font-bold pt-8">উপসংহার</p>
-            <p className="text-sm">
+            <p className="text-xs lg:text-base font-bold pt-3 lg:pt-8">
+              উপসংহার
+            </p>
+            <p className="text-[8px] leading-[1.5] lg:text-sm">
               বাংলাদেশে সেরা অনলাইন ক্যাসিনো অভিজ্ঞতার জন্য, আমাদের
               প্ল্যাটফর্মের চেয়ে আর কিছু দেখার প্রয়োজন নেই। Microgaming, SABA
               Sports, JDB, CQ9, Pocket Games এবং আরও অনেক শীর্ষ প্রদানকারীদের
@@ -141,7 +143,7 @@ export default function ToggleParagraph() {
 
           {/* Overlay when content is not expanded */}
           {!isExpanded && (
-            <div className="absolute bottom-0 left-0 w-full h-6 bg-gradient-to-t from-gray-700 to-transparent blur-0 pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-full h-6 bg-gradient-to-t from-slate-900 to-transparent blur-0 pointer-events-none"></div>
           )}
         </div>
 

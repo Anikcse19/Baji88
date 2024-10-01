@@ -67,8 +67,12 @@ const DBMyAccount = ({ setMyAccount }) => {
           <MyAccountTitle>Funds</MyAccountTitle>
 
           <div className="w-full flex items-center justify-around p-2">
-            <MyAccountBtns url="/deposit" imgUrl="/icon-deposit.png">Deposite</MyAccountBtns>
-            <MyAccountBtns url="/withdraw" imgUrl="/icon-withdrawal.png">Withdraw</MyAccountBtns>
+            <MyAccountBtns url="/deposit" imgUrl="/icon-deposit.png">
+              Deposite
+            </MyAccountBtns>
+            <MyAccountBtns url="/withdraw" imgUrl="/icon-withdrawal.png">
+              Withdraw
+            </MyAccountBtns>
           </div>
         </div>
 
@@ -77,13 +81,14 @@ const DBMyAccount = ({ setMyAccount }) => {
           <MyAccountTitle>History</MyAccountTitle>
 
           <div className="w-full flex items-center justify-between p-2">
-            <MyAccountBtns imgUrl="/icon-bet-records.png">
+            <MyAccountBtns
+              url="/user-panel/betting-history"
+              imgUrl="/icon-bet-records.png"
+            >
               Betting Records
             </MyAccountBtns>
 
-            <MyAccountBtns imgUrl="/icon-turnover.png">
-              Turnover
-            </MyAccountBtns>
+            <MyAccountBtns imgUrl="/icon-turnover.png">Turnover</MyAccountBtns>
 
             <MyAccountBtns
               imgUrl="/icon-records.png"
@@ -100,17 +105,21 @@ const DBMyAccount = ({ setMyAccount }) => {
           <MyAccountTitle>Profile</MyAccountTitle>
 
           <div className="w-full flex items-center justify-between p-2">
-            <MyAccountBtns url="/profile" imgUrl="/icon-profile.png">Personal Info</MyAccountBtns>
+            <MyAccountBtns url="/profile" imgUrl="/icon-profile.png">
+              Personal Info
+            </MyAccountBtns>
 
             <MyAccountBtns
-            url="/change-password"
+              url="/change-password"
               imgUrl="/icon-resetpasswords.png"
               className="flex flex-col leading-3 max-w-[80px]"
             >
               Reset password
             </MyAccountBtns>
 
-            <MyAccountBtns url="/inbox" imgUrl="/icon-inbox.png">Inbox</MyAccountBtns>
+            <MyAccountBtns url="/inbox" imgUrl="/icon-inbox.png">
+              Inbox
+            </MyAccountBtns>
 
             <MyAccountBtns imgUrl="/icon-referral.png">Referral</MyAccountBtns>
           </div>
