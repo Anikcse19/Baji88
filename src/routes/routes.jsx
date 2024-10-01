@@ -17,6 +17,8 @@ import DBWithdraw from "../pages/dashboard/DBWithdraw";
 import DBProfile from "../pages/dashboard/DBProfile";
 import DBChangePassword from "../pages/dashboard/DBChangePassword";
 import DBInbox from "../pages/dashboard/DBInbox";
+import DBPromotion from "../pages/dashboard/DBPromotion";
+import DBMyReferral from "../pages/dashboard/DBMyReferral";
 
 const routes = createBrowserRouter([
   {
@@ -75,6 +77,15 @@ const routes = createBrowserRouter([
   {
     path: "/inbox",
     element: <DBInbox />,
+  },
+
+  {
+    path: "/referral-program/promotion",
+    element: <DBPromotion />,
+  },
+  {
+    path: "/referral-program/details",
+    element: <DBMyReferral/>,
   },
 
   {
