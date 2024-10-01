@@ -121,7 +121,7 @@ const DBMyAccount = ({ setMyAccount }) => {
               Inbox
             </MyAccountBtns>
 
-            <MyAccountBtns imgUrl="/icon-referral.png">Referral</MyAccountBtns>
+            <MyAccountBtns url="/referral-program/promotion" imgUrl="/icon-referral.png">Referral</MyAccountBtns>
           </div>
         </div>
 
