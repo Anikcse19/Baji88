@@ -12,7 +12,6 @@ const HomePage = () => {
         <HomeBanner />
       </div>
       <div className="block lg:hidden  py-3 mb-6">
-        {/* <DBHomePageMainSlider /> */}
         <HomePageSlider />
 
         <div className="w-full h-8">

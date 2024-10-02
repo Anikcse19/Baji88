@@ -3,9 +3,9 @@ import CommonNav from "../../utils/CommonNav";
 import { IoPauseOutline } from "react-icons/io5";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { FaPlus } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const DBProfile = () => {
-
   return (
     <div>
       <CommonNav>Personal Info</CommonNav>
@@ -44,9 +44,11 @@ const DBProfile = () => {
           <p className="text-primary font-medium text-[21px]">1166.6</p>
         </div>
 
-        <button className="text-white w-full h-full flex justify-center items-center gap-1 text-sm font-medium bg-gradient-to-r from-[#2fb19e] to-[#19916b]">
-          My VIP <MdOutlineDoubleArrow />
-        </button>
+        <Link to="/vip-points-exchange" className="w-full h-full">
+          <button className="text-white w-full h-full flex justify-center items-center gap-1 text-sm font-medium bg-gradient-to-r from-[#2fb19e] to-[#19916b]">
+            My VIP <MdOutlineDoubleArrow />
+          </button>
+        </Link>
       </div>
 
       {/* Ueer Info */}
@@ -131,11 +133,7 @@ const DBProfile = () => {
 
       <div className="flex pt-6 pb-20 px-4 items-center gap-2">
         <div className="w-[10%]">
-          <img
-            src="/icon-customer.png"
-            alt=""
-            className="w-[32px] h-[32px]"
-          />
+          <img src="/icon-customer.png" alt="" className="w-[32px] h-[32px]" />
         </div>
 
         <div className="w-[70%] text-xs text-white">
@@ -148,7 +146,6 @@ const DBProfile = () => {
       </div>
     </div>
   );
-  
 };
 
 export default DBProfile;
