@@ -1,15 +1,27 @@
 import { RiFileCopy2Line, RiLinkM } from "react-icons/ri";
 import DBReferralProgram from "./DBReferralProgram";
 import { BsFillQuestionCircleFill, BsQrCode } from "react-icons/bs";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { AiOutlineClose } from "react-icons/ai";
+import useStore from "../../Zustand/store/useStore";
 
 const DBMyReferral = () => {
+  const [open, setOpen] = useState(false);
+  const [openCopyModal, setOpenCopyModal] = useState(false);
+  const { openRewardTable, setOpenRewardTable } = useStore();
+
+  const handleDrawerToggle = () => {
+    setOpenRewardTable(!openRewardTable);
+  };
+
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
+  
   return (
     <DBReferralProgram>
-      <div className="pb-10">
+      <div className="pb-10 relative">
         {/* Refere Your Friend and earn */}
         <div
           className="h-[353px] bg-cover flex flex-col justify-cente pt-[10%] items-center"
@@ -33,9 +45,12 @@ const DBMyReferral = () => {
         >
           <p className="text-xs text-[#b5b5b5]">Your Referral Code</p>
 
-          <h2 className="flex items-center font-bold text-yellow gap-1">
+          <button
+            onClick={() => setOpenCopyModal((prev) => !prev)}
+            className="flex items-center font-bold text-yellow gap-1"
+          >
             bzJOq <RiFileCopy2Line />
-          </h2>
+          </button>
 
           {/* Scaner Img */}
           <div className="mt-3">
@@ -44,7 +59,10 @@ const DBMyReferral = () => {
 
           {/* Copy and Share Buttons */}
           <div className="w-full flex items-center gap-3 font-semibold mt-5">
-            <button className="bg-yellow w-1/2 flex justify-center py-3 rounded-md items-center gap-1">
+            <button
+              onClick={() => setOpen((prev) => !prev)}
+              className="bg-yellow w-1/2 flex justify-center py-3 rounded-md items-center gap-1"
+            >
               Copy Link <RiLinkM className="text-xl" />
             </button>
             <button className="bg-yellow w-1/2 flex justify-center py-3 rounded-md items-center gap-1">
@@ -60,8 +78,8 @@ const DBMyReferral = () => {
             backgroundImage: "url(/referral-panel-bg-2.png)",
           }}
         >
-          {/* Reward details BTn */}
-          <button
+          {/* Reward details Btn */}
+          <button onClick={()=>handleDrawerToggle()}
             className="absolute right-0 top-0 text-xs bg-yellow px-3 py-1"
             style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 10% 100%)" }}
           >
@@ -104,6 +122,48 @@ const DBMyReferral = () => {
             </div>
           </div>
         </div>
+
+        {/* Copy URL Modal */}
+        {open && (
+          <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-80 flex justify-center items-center p-[4vw]">
+            <div className="w-full">
+              <div className="bg-primary text-white font-bold px-4 py-3 flex gap-">
+                <p className="w-[93%] text-sm">Notification</p>
+                <button onClick={() => setOpen((prev) => !prev)}>
+                  <AiOutlineClose className="text-2xl" />
+                </button>
+              </div>
+
+              <div className="bg-white p-7 w-full">
+                <p className="text-sm">
+                  Already copies to clipboard: <br />
+                  <span>www.baji.live?refcode=bzkJOq</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Copy Code Modal */}
+        {openCopyModal && (
+          <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-80 flex justify-center items-center p-[4vw]">
+            <div className="w-full">
+              <div className="bg-primary text-white font-bold px-4 py-3 flex gap-">
+                <p className="w-[93%] text-sm">Notification</p>
+                <button onClick={() => setOpenCopyModal((prev) => !prev)}>
+                  <AiOutlineClose className="text-2xl" />
+                </button>
+              </div>
+
+              <div className="bg-white p-7 w-full">
+                <p className="text-sm">Already copies to clipboard.</p>
+              </div>
+            </div>
+          </div>
+        )}
+
+
+       
       </div>
     </DBReferralProgram>
   );

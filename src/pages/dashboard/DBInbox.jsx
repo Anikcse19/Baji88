@@ -22,6 +22,7 @@ const DBInbox = () => {
           <p className="text-[10px]">GMT+6</p>
         </div>
       </div>
+      
       {/* Message */}
       <div
         onClick={() => setOpen((prev) => !prev)}
