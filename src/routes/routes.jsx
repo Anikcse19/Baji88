@@ -17,12 +17,9 @@ import DBWithdraw from "../pages/dashboard/DBWithdraw";
 import DBProfile from "../pages/dashboard/DBProfile";
 import DBChangePassword from "../pages/dashboard/DBChangePassword";
 import DBInbox from "../pages/dashboard/DBInbox";
-<<<<<<< HEAD
-import BettingHistory from "../pages/dashboard/BettingHistory";
-=======
 import DBPromotion from "../pages/dashboard/DBPromotion";
 import DBMyReferral from "../pages/dashboard/DBMyReferral";
->>>>>>> 22e5e9f9a4e43bc3a458a385ae619aae26dbe813
+import BettingHistory from "../pages/dashboard/BettingHistory";
 
 const routes = createBrowserRouter([
   {
