@@ -11,6 +11,7 @@ import { RiLogoutBoxRLine } from "react-icons/ri";
 const DBMyAccount = ({ setMyAccount }) => {
   return (
     <div className="absolute top-0 left-0 h-full w-full bg-black">
+      
       {/* Name and VIP Points */}
       <div
         className="h-[20vh] bg-cover relative z-[9] bg-center"
@@ -121,7 +122,12 @@ const DBMyAccount = ({ setMyAccount }) => {
               Inbox
             </MyAccountBtns>
 
-            <MyAccountBtns url="/referral-program/promotion" imgUrl="/icon-referral.png">Referral</MyAccountBtns>
+            <MyAccountBtns
+              url="/referral-program/promotion"
+              imgUrl="/icon-referral.png"
+            >
+              Referral
+            </MyAccountBtns>
           </div>
         </div>
 
@@ -130,11 +136,21 @@ const DBMyAccount = ({ setMyAccount }) => {
           <MyAccountTitle>Contact Us</MyAccountTitle>
 
           <div className="w-full flex items-center justify-between p-2">
-            <MyAccountBtns imgUrl="/icon-whatsapp.png">Whatsapp</MyAccountBtns>
+            <MyAccountBtns
+              newTab={true}
+              url="https://api.whatsapp.com/message/TYL5MTAFWPIRD1?autoload=1&app_absent=0"
+              imgUrl="/icon-whatsapp.png"
+            >
+              Whatsapp
+            </MyAccountBtns>
 
             <MyAccountBtns imgUrl="/icon-email.png">Email</MyAccountBtns>
 
-            <MyAccountBtns imgUrl="/icon-facebook-messenger.png">
+            <MyAccountBtns
+              newTab={true}
+              url="https://www.facebook.com/baji.bgd/"
+              imgUrl="/icon-facebook-messenger.png"
+            >
               Facebook
             </MyAccountBtns>
           </div>
@@ -148,6 +164,7 @@ const DBMyAccount = ({ setMyAccount }) => {
           </button>
         </div>
       </div>
+
     </div>
   );
 };
