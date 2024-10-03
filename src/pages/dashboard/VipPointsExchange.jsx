@@ -56,10 +56,12 @@ const VipPointsExchange = () => {
         </div>
 
         <div className="bg-[#ffffff1a] w-full py-2 rounded-b-md px-3 flex justify-end">
-          <button className="flex gap-2 items-center">
-            View Vip Details
-            <MdKeyboardDoubleArrowRight className="text-xl mt-1" />
-          </button>
+          <Link to="/vip-detail">
+            <button className="flex gap-2 items-center text-sm">
+              View Vip Details
+              <MdKeyboardDoubleArrowRight className="text-xl mt-1" />
+            </button>
+          </Link>
         </div>
       </div>
 
@@ -74,13 +76,16 @@ const VipPointsExchange = () => {
               VP
             </span>
           </div>
-
-          <div
-            className="px-5 py-3 rounded-full w-max"
-            style={{ background: "linear-gradient(180deg,#f8e67d 0,#aa710e)" }}
-          >
-            <img src="/icon-points.svg" alt="" className="" />
-          </div>
+          <Link to="/vip-points-records/received">
+            <div
+              className="px-5 py-3 rounded-full w-max"
+              style={{
+                background: "linear-gradient(180deg,#f8e67d 0,#aa710e)",
+              }}
+            >
+              <img src="/icon-points.svg" alt="" className="" />
+            </div>
+          </Link>
         </div>
       </div>
 

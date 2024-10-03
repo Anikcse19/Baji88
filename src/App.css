@@ -39,3 +39,10 @@
     transform: rotate(45deg) translate(15px, 15px);
   }
 }
+
+/* Gradient Text Color */
+.gradient-text {
+  background: -webkit-linear-gradient(#a3803b, #fed980);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

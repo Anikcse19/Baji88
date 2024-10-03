@@ -52,7 +52,6 @@ const DBReferralProgram = ({ children }) => {
       {children}
 
       {/* RewardsDetails Sidebar */}
-     
         <div
           className={`w-screen h-full bg-black fixed z-[9999] top-0 right-0 transition-transform  duration-300 ${
             openRewardTable ? "translate-x-0" : "translate-x-full"
