@@ -8,7 +8,7 @@ import HomePageSlider from "../components/Slider/HomePageSlider";
 const HomePage = () => {
   return (
     <Layout>
-      <div className="hidde lg:block">
+      <div className="hidden lg:block">
         <HomeBanner />
       </div>
       <div className="block lg:hidden  py-3 mb-6">
