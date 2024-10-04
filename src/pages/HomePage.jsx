@@ -2,17 +2,18 @@ import { HiOutlineSpeakerphone } from "react-icons/hi";
 import FloatingNav from "../components/FloatingNav";
 import HomeBanner from "../components/HomeBanner";
 import Layout from "../components/Layout/Layout";
-import DBHomePageMainSlider from "../components/Slider/DBHomePageMobileSlider";
 import FavouritesAndCharcteristics from "../components/ui/FavouritesAndCharcteristics";
+import HomePageSlider from "../components/Slider/HomePageSlider";
 
 const HomePage = () => {
   return (
     <Layout>
-      <div className="hidden lg:block">
+      <div className="hidde lg:block">
         <HomeBanner />
       </div>
       <div className="block lg:hidden  py-3 mb-6">
-        <DBHomePageMainSlider />
+        <HomePageSlider />
+
         <div className="w-full h-8">
           <div className="w-[95%] lg:w-[85%] mx-auto flex items-center justify-center gap-1 ">
             <HiOutlineSpeakerphone className="lg:hidden text-green-500 text-6xl" />

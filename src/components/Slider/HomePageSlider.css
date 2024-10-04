@@ -1,0 +1,49 @@
+/* Pagination bullets */
+.mainSlider .swiper-pagination-bullet {
+  position: relative;
+  width: 20px;
+  height: 4px;
+  background-color: #898989;
+  border-radius: 0;
+  overflow: hidden;
+  margin: 0 8px;
+}
+
+
+/* Progress bar (inactive bullets won't animate) */
+.mainSlider .bullet-progress {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff; /* Progress bar color */
+  transform: scaleX(0); /* Initially no progress */
+  transform-origin: left;
+}
+
+/* Only active bullet will have progress animation */
+.mainSlider .swiper-pagination-bullet-active .bullet-progress {
+  animation: progress-animation 3s linear forwards; /* Adjust the duration to match autoplay delay */
+}
+
+@keyframes progress-animation {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+
+.mainSlider .swiper-slide-prev,
+.mainSlider .swiper-slide-next{
+  width: 20% !important;
+}
+
+.mainSlider .swiper-slide-active{
+  width: 60% !important;
+  border-radius: 18px;
+}

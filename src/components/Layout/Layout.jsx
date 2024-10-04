@@ -40,6 +40,7 @@ const Layout = ({ children }) => {
         <Header setSideMenuOpen={setSideMenuOpen} />
         <Navbar />
       </div>
+
       {/* Overlay for when side menu is open */}
       <div
         className={`fixed top-0 left-0 w-full h-full cursor-pointer bg-black bg-opacity-10 z-[998] transition-opacity duration-300 lg:hidden  ${
@@ -80,16 +81,13 @@ const Layout = ({ children }) => {
       </div>
 
       {/* My Account Menu */}
-      <div>
-        {myAccount && (
-          <div
-            className={`bg-black w-full h-full fixed top-0 left-0 z-[999] transition-transform duration-300 ${
-              myAccount ? "translate-y-0" : "translate-y-full"
-            } overflow-y-auto`} // Allows scrolling inside My Account
-          >
-            <DBMyAccount setMyAccount={setMyAccount} />
-          </div>
-        )}
+
+      <div
+        className={`bg-black w-full h-full fixed top-0 left-0 z-[999] transition-transform duration-300 ${
+          myAccount ? "translate-y-0" : "translate-y-full"
+        } overflow-y-auto`} // Allows scrolling inside My Account
+      >
+        <DBMyAccount setMyAccount={setMyAccount} />
       </div>
     </div>
   );

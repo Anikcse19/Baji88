@@ -22,6 +22,12 @@ import DBPromotion from "../pages/dashboard/DBPromotion";
 import DBMyReferral from "../pages/dashboard/DBMyReferral";
 import BettingHistory from "../pages/dashboard/BettingHistory";
 
+import VipPointsExchange from "../pages/dashboard/VipPointsExchange";
+import VipHistory from "../pages/dashboard/VipHistory";
+import VPReceived from "../pages/dashboard/VPReceived";
+import VPUsed from "../pages/dashboard/VPUsed";
+import VipDetails from "../pages/dashboard/VipDetails";
+
 const routes = createBrowserRouter([
   {
     path: "/",
@@ -73,6 +79,22 @@ const routes = createBrowserRouter([
     element: <DBProfile />,
   },
   {
+    path: "/vip-points-exchange",
+    element: <VipPointsExchange />,
+  },
+  {
+    path: "/vip-history",
+    element: <VipHistory />,
+  },
+  {
+    path: "/vip-points-records/received",
+    element: <VPReceived />,
+  },
+  {
+    path: "/vip-points-records/used",
+    element: <VPUsed />,
+  },
+  {
     path: "/change-password",
     element: <DBChangePassword />,
   },
@@ -92,6 +114,10 @@ const routes = createBrowserRouter([
   {
     path: "/referral-program/details",
     element: <DBMyReferral />,
+  },
+  {
+    path: "/vip-detail",
+    element: <VipDetails />,
   },
 
   {
