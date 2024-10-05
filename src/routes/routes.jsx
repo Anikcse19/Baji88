@@ -27,11 +27,25 @@ import VipHistory from "../pages/dashboard/VipHistory";
 import VPReceived from "../pages/dashboard/VPReceived";
 import VPUsed from "../pages/dashboard/VPUsed";
 import VipDetails from "../pages/dashboard/VipDetails";
+import Deposite from "../pages/dashboard/Deposite";
+import Withdraw from "../pages/dashboard/Withdraw";
 
 const routes = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
+  },
+  {
+    path: "/member-center",
+    element: <Deposite />,
+  },
+  {
+    path: "/member-center/deposite",
+    element: <Deposite />,
+  },
+  {
+    path: "/member-center/withdraw",
+    element: <Withdraw />,
   },
   {
     path: "/casino",
