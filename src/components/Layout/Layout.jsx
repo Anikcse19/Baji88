@@ -54,7 +54,7 @@ const Layout = ({ children }) => {
       {/* Side Menu */}
       <div>
         <div
-          className={`fixed top-0 left-0 h-full w-[390px] bg-transparent z-[999] overflow-y-scroll transition-transform duration-300 transform lg:hidden ${
+          className={`fixed top-0 left-0 h-full w-[290px] bg-transparent z-[999] overflow-y-scroll transition-transform duration-300 transform lg:hidden ${
             sideMenuOpen ? "translate-x-0" : "-translate-x-full"
           }`}
           onClick={(e) => e.stopPropagation()} // Prevent click inside menu from closing it
