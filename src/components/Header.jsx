@@ -5,7 +5,7 @@ import { MdEmail } from "react-icons/md";
 import { FaFacebookSquare } from "react-icons/fa";
 import { BiMenuAltLeft } from "react-icons/bi";
 import { LuMessagesSquare } from "react-icons/lu";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useStore from "../Zustand/store/useStore";
 import MobileNavSlider from "./Slider/MobileNavSlider";
 
@@ -90,6 +90,14 @@ const Header = ({ setSideMenuOpen }) => {
               >
                 লগ ইন
               </div>
+
+              <Link
+                to="/member-center/profile"
+                className="hidden lg:block px-8 py-1 rounded-md hover:border hover:border-yellow-300 transition-all duration-300 ease-in cursor-pointer text-white"
+              >
+                Member Center
+              </Link>
+
               <div
                 onClick={() => {
                   navigate("/registration");

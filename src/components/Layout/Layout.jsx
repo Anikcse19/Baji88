@@ -81,7 +81,6 @@ const Layout = ({ children }) => {
       </div>
 
       {/* My Account Menu */}
-
       <div
         className={`bg-black w-full h-full fixed top-0 left-0 z-[999] transition-transform duration-300 ${
           myAccount ? "translate-y-0" : "translate-y-full"
