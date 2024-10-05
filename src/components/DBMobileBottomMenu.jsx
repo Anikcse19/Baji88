@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { LuUser2 } from "react-icons/lu";
+
 import { Link, useNavigate } from "react-router-dom";
 
 const DBMobileBottomMenu = ({ setMyAccount }) => {

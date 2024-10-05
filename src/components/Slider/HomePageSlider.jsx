@@ -17,7 +17,7 @@ const HomePageSlider = () => {
 
   return (
     <Swiper
-      modules={[Pagination, Autoplay]} 
+      modules={[Pagination, Autoplay]}
       spaceBetween={10}
       slidesPerView={3}
       centeredSlides={true}
@@ -35,9 +35,9 @@ const HomePageSlider = () => {
       }}
       className="mainSlider"
     >
-      {images.map((slide) => (
-        <SwiperSlide key={slide.id} className="rounded-md bg-transparent h-[117px]">
-          <img src={slide} alt="" className="rounded-md"/>
+      {images.map((slide, i) => (
+        <SwiperSlide key={i} className="rounded-md bg-transparent h-[117px]">
+          <img src={slide} alt="" className="rounded-md" />
         </SwiperSlide>
       ))}
 
