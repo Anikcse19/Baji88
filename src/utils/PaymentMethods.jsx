@@ -91,13 +91,16 @@ const PaymentMethods = ({ setDepositeChannel }) => {
 
   return (
     <div className="mt-2">
+      <p className="text-white text-sm font-semibold mt-5 mb-2 hidden md:block">
+        Payment Method
+      </p>
       {/* List Of Payment Methods */}
-      <div className="grid grid-cols-3 gap-2.5">
+      <div className="grid grid-cols-3 md:grid-cols-5 gap-2.5">
         {paymentMethods.map((item, idx) => {
           return (
             <button
               key={idx}
-              className={`border  rounded-md flex flex-col justify-center items-center p-2 gap-1 relative ${
+              className={`border rounded-md flex flex-col justify-center items-center p-2 gap-1 relative md:overflow-hidden ${
                 active === item.method ? "border-[#ffdf1a]" : "border-gray-600"
               }`}
               onClick={() => {
@@ -117,7 +120,7 @@ const PaymentMethods = ({ setDepositeChannel }) => {
               {/* Promotion Sticker */}
               {item.promotion && (
                 <div
-                  className="absolute -right-1 top-1 bg-cover bg-center w-[48px] h-[22px] bg-no-repeat flex justify-end items-center rounded-sm"
+                  className="absolute -right-1 md:right-0 top-1 bg-cover bg-center w-[48px] md:w-[52px] h-[22px] md:h-[24px] bg-no-repeat flex justify-end items-center rounded-sm"
                   style={{ backgroundImage: "url(/bookmark.png)" }}
                 >
                   <p className="text-white text-xs font-semibold">+1.5%</p>
@@ -135,10 +138,35 @@ const PaymentMethods = ({ setDepositeChannel }) => {
         })}
       </div>
 
-      <div className="bg-[#ffdf1a] w-max px-10 py-2 mt-4 rounded-md text-sm font-medium">
+      <div className="bg-[#ffdf1a] w-max px-10 py-2 mt-4 rounded-md text-sm font-medium md:hidden">
         <p>
           <span className="capitalize">{active}</span> Payment
         </p>
+      </div>
+
+      <div className=" mt-6  hidden md:block">
+        <p className="text-white text-sm font-semibold">Payment Type</p>
+        <div className="mt-2 border-b border-primary ">
+          <button className="bg-primary px-5 py-1 rounded-t-md uppercase text-white">
+            {active}
+          </button>
+        </div>
+
+        <div className="bg-black bg-opacity-30 py-5 px-2">
+          <div>
+            <p className="text-sm text-[#7293e1]">Deposite Channel</p>
+            <div className="mt-4 text-sm font-medium flex items-center gap-4">
+              <button className=" border border-yellow text-yellow rounded-[4px] w-[120px] py-2">
+                Cash Out
+              </button>
+              <button className="border border-gray-500 rounded-[4px] w-[120px] py-2 text-gray-500">
+                Send Money
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div></div>
       </div>
     </div>
   );

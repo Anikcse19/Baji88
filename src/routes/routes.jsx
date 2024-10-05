@@ -29,6 +29,7 @@ import VPUsed from "../pages/dashboard/VPUsed";
 import VipDetails from "../pages/dashboard/VipDetails";
 import Deposite from "../pages/dashboard/Deposite";
 import Withdraw from "../pages/dashboard/Withdraw";
+import MemberProfile from "../pages/MemberProfile";
 
 const routes = createBrowserRouter([
   {
@@ -36,8 +37,8 @@ const routes = createBrowserRouter([
     element: <HomePage />,
   },
   {
-    path: "/member-center",
-    element: <Deposite />,
+    path: "/member-center/profile",
+    element: <MemberProfile />,
   },
   {
     path: "/member-center/deposite",

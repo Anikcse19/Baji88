@@ -92,7 +92,7 @@ const Header = ({ setSideMenuOpen }) => {
               </div>
 
               <Link
-                to="/member-center"
+                to="/member-center/profile"
                 className="hidden lg:block px-8 py-1 rounded-md hover:border hover:border-yellow-300 transition-all duration-300 ease-in cursor-pointer text-white"
               >
                 Member Center
