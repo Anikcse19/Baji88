@@ -6,9 +6,11 @@ import { MdMailOutline } from "react-icons/md";
 import { PiTelegramLogo } from "react-icons/pi";
 import { RiPinterestLine } from "react-icons/ri";
 import { SlSocialFacebook } from "react-icons/sl";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const DBSideMenu = () => {
+  const { pathname } = useLocation();
+
   const fundsMenus = [
     {
       name: "Betting Records",
@@ -17,7 +19,7 @@ const DBSideMenu = () => {
     },
     {
       name: "My Wallet",
-      path: "",
+      path: "/member-center/deposite",
       icon: "/wallet.svg",
     },
     {
@@ -40,7 +42,7 @@ const DBSideMenu = () => {
   const profileMenus = [
     {
       name: "Perdonal Info",
-      path: "",
+      path: "/member-center/profile",
       icon: "/member.svg",
     },
     {
@@ -110,6 +112,7 @@ const DBSideMenu = () => {
       icon: <SlSocialFacebook />,
     },
   ];
+
   return (
     <div className="w-[23%]">
       {/* Profile and Menus */}
@@ -138,24 +141,40 @@ const DBSideMenu = () => {
 
           <div className="flex items-center gap-5 mt-5">
             <Link to="/member-center/deposite">
-              <button className="flex flex-col justify-center items-center text-white  hover:text-[#26ffbc]">
+              <button
+                className={`flex flex-col justify-center items-center text-[13px] hover:text-[#26ffbc] ${
+                  pathname === "/member-center/deposite"
+                    ? "text-[#26ffbc]"
+                    : "text-white"
+                }`}
+              >
                 <img
                   src="/icon-deposit.png"
                   alt=""
-                  className="w-[35px] h-[35px] hover:bg-white rounded-full p-[1px]"
+                  className={`w-[35px] h-[35px] hover:bg-white rounded-full p-[1px] ${
+                    pathname === "/member-center/deposite" ? "bg-white" : ""
+                  }`}
                 />
-                <span className="text-[13px] ">Deposite</span>
+                <span>Deposite</span>
               </button>
             </Link>
 
             <Link to="/member-center/withdraw">
-              <button className="flex flex-col justify-center items-center text-white  hover:text-[#26ffbc]">
+              <button
+                className={`flex flex-col justify-center items-center text-[13px] hover:text-[#26ffbc] ${
+                  pathname === "/member-center/withdraw"
+                    ? "text-[#26ffbc]"
+                    : "text-white"
+                }`}
+              >
                 <img
-                  src="/icon-withdrawal.png"
+                  src="/icon-deposit.png"
                   alt=""
-                  className="w-[35px] h-[35px] hover:bg-white rounded-full p-[1px]"
+                  className={`w-[35px] h-[35px] hover:bg-white rounded-full p-[1px] ${
+                    pathname === "/member-center/withdraw" ? "bg-white" : ""
+                  }`}
                 />
-                <span className="text-[13px] ">Withdraw</span>
+                <span>Withdraw</span>
               </button>
             </Link>
           </div>
@@ -169,6 +188,7 @@ const DBSideMenu = () => {
             <li>
               {fundsMenus.map((item, idx) => (
                 <Link
+                  to={item.path}
                   key={idx}
                   className="px-5 py-1.5 my-1 hover:bg-black hover:bg-opacity-20 flex items-center text-sm text-white hover:border-[#26ffbc] hover:text-[#26ffbc] border-l-4 border-transparent hover:border-l-4 gap-2 transition-all duration-200 ease-in-out"
                 >
@@ -188,6 +208,7 @@ const DBSideMenu = () => {
             <li>
               {profileMenus.map((item, idx) => (
                 <Link
+                  to={item.path}
                   key={idx}
                   className="px-5 py-1.5 my-1 hover:bg-black hover:bg-opacity-20 flex items-center text-sm text-white hover:border-[#26ffbc] hover:text-[#26ffbc] border-l-4 border-transparent hover:border-l-4 gap-2 transition-all duration-200 ease-in-out"
                 >

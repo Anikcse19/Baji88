@@ -3,11 +3,13 @@ import MemberCenter from "../MemberCenter";
 import { WiTime3 } from "react-icons/wi";
 import { FaCircle } from "react-icons/fa";
 import PaymentMethods from "../../utils/PaymentMethods";
+import { Link } from "react-router-dom";
 
 const Deposite = () => {
   return (
     <MemberCenter>
       <div className="w-full flex gap-2">
+        {/* ========= LEFT CONTENT ============= */}
         <div className="w-[80%] bg-[#313131] rounded-md p-5">
           {/* Funds */}
           <div className="flex items-center justify-between border-b border-dashed border-[#26ffbc] pb-4">
@@ -17,18 +19,23 @@ const Deposite = () => {
             </div>
 
             <div>
-              <button
-                className="px-12 py-1.5 rounded-md text-white font-semibold"
-                style={{
-                  background:
-                    "linear-gradient(to right,#e4c400 0,#f7a204 100%)",
-                }}
-              >
-                Deposite
-              </button>
-              <button className="text-white px-10 bg-[#4e4e4e] font-semibold">
-                Withdraw
-              </button>
+              <Link to="/member-center/deposite">
+                <button
+                  className="px-12 py-1.5 rounded-md text-white font-semibold"
+                  style={{
+                    background:
+                      "linear-gradient(to right,#e4c400 0,#f7a204 100%)",
+                  }}
+                >
+                  Deposite
+                </button>
+              </Link>
+
+              <Link to="/member-center/withdraw">
+                <button className="text-white px-10 bg-[#4e4e4e] font-semibold">
+                  Withdraw
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -50,7 +57,7 @@ const Deposite = () => {
             <div className="flex justify-center mt-4 h-[140px] p- bg-primary rounded-md relative">
               <div className="w-1/2 border-r border-dashed p-2 pr-4 border-black">
                 <img
-                  src="/public/image_21623.jpg"
+                  src="/image_21623.jpg"
                   alt=""
                   className="rounded-md object-cover"
                 />
@@ -84,7 +91,21 @@ const Deposite = () => {
           {/* Payment Methods */}
           <PaymentMethods />
         </div>
-        <div className="w-[20%] bg-[#313131] rounded-md">k</div>
+        {/* ======== LEFT CONTENT END ========= */}
+
+        {/* =========== RIGHT CONTENT =============== */}
+        <div className="w-[20%] h-max pb-20 bg-[#313131] rounded-md p-4">
+          <p className="text-sm text-[#7293e1]">Deposite Records</p>
+          <div className="flex flex-col items-center justify-center mt-5">
+            <img
+              src="https://www.baji.live/images/web/player/table/no-value.svg"
+              alt=""
+              className="w-[50%]"
+            />
+            <p className="text-xs text-gray-500 mt-2">No Data</p>
+          </div>
+        </div>
+        {/* ========= RIGHT CONTENT END ============= */}
       </div>
     </MemberCenter>
   );

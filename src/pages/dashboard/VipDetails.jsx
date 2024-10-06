@@ -391,7 +391,7 @@ const VipDetails = () => {
 
                       <div className="flex items-center justify-center gap-1">
                         <img
-                          src="/public/coin.png"
+                          src="/coin.png"
                           className="w-[18px] h-[18px]"
                           alt=""
                         />
