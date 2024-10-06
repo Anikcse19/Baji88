@@ -30,6 +30,7 @@ import VipDetails from "../pages/dashboard/VipDetails";
 import Deposite from "../pages/dashboard/Deposite";
 import Withdraw from "../pages/dashboard/Withdraw";
 import MemberProfile from "../pages/MemberProfile";
+import CasinoPageMobile from "../pages/mobile/CasinoPageMobile";
 
 const routes = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const routes = createBrowserRouter([
   {
     path: "/casino",
     element: <CasinoPage />,
+  },
+  {
+    path: "/mcasino",
+    element: <CasinoPageMobile />,
   },
   {
     path: "/slot",

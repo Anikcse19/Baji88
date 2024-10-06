@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
-import useStore from "../Zustand/store/useStore";
+// import useStore from "../Zustand/store/useStore";
 import { useState } from "react";
 
 const DBMobileSideMenu = () => {
   // const { isOpenSideDropdown, setIsOpenSideDropdown } = useStore();
   const [openSubMenuIndex, setOpenSubMenuIndex] = useState(null);
+
   // Main Menus
   const menus = [
     {
@@ -82,8 +83,15 @@ const DBMobileSideMenu = () => {
       icon: "/icon-casino.png",
       subMenu: [
         {
+          id: 0,
+          title: "All",
+          path: "/mcasino",
+          img: "/all-icon.svg",
+        },
+        {
           id: 1,
           title: "Evolution",
+          path: "/mcasino",
           img: "/provider-evo.png",
         },
         {
@@ -112,31 +120,343 @@ const DBMobileSideMenu = () => {
       name: "Slots",
       path: "",
       icon: "/icon-slot.png",
+      subMenu: [
+        {
+          id: 0,
+          title: "All",
+          img: "/all-icon.svg",
+        },
+        {
+          id: 1,
+          title: "Jilli",
+          img: "/slot-provider-awcmjili.png",
+        },
+        {
+          id: 2,
+          title: "PG Soft",
+          img: "/slot-provider-pg.png",
+        },
+        {
+          id: 3,
+          title: "Pragmatic Play",
+          img: "/provider-awcmpp.png",
+        },
+        {
+          id: 4,
+          title: "JDB",
+          img: "/slot-provider-jdb.png",
+        },
+        {
+          id: 5,
+          title: "Fa Chai",
+          img: "/slot-provider-awcmfc.png",
+        },
+        {
+          id: 6,
+          title: "SpadeGaming",
+          img: "/slot-provider-awcmsg.png",
+        },
+        {
+          id: 7,
+          title: "Red Tiger",
+          img: "/slot-provider-awcmrt.png",
+        },
+        {
+          id: 8,
+          title: "FastSpin",
+          img: "/slot-provider-awcmfastspin.png",
+        },
+        {
+          id: 9,
+          title: "Playtech",
+          img: "/provider-awcmpt.png",
+        },
+        {
+          id: 10,
+          title: "Yellow Bat",
+          img: "/slot-provider-awcmyesbingo.png",
+        },
+        {
+          id: 11,
+          title: "Rich88",
+          img: "/slot-provider-rich88.png",
+        },
+        {
+          id: 100,
+          title: "KA Gaming",
+          img: "/slot-provider-ka.png",
+        },
+        {
+          id: 12,
+          title: "WorldMatch",
+          img: "/slot-provider-worldmatch.png",
+        },
+        {
+          id: 13,
+          title: "CQ9",
+          img: "/slot-provider-cq9.png",
+        },
+        {
+          id: 14,
+          title: "Joker",
+          img: "/slot-provider-joker.png",
+        },
+        {
+          id: 15,
+          title: "PLAY'N GO",
+          img: "/slot-provider-playngo.png",
+        },
+        {
+          id: 16,
+          title: "Play8",
+          img: "/slot-provider-awcmp8.png",
+        },
+        {
+          id: 17,
+          title: "Netent",
+          img: "/slot-provider-netent.png",
+        },
+      ],
     },
     {
       name: "Table",
       path: "",
       icon: "/icon-table.png",
+      subMenu: [
+        {
+          id: 0,
+          title: "All",
+          img: "/all-icon.svg",
+        },
+        {
+          id: 1,
+          title: "Jilli",
+          img: "/slot-provider-awcmjili.png",
+        },
+        {
+          id: 2,
+          title: "KingMaker",
+          img: "/table-provider-awcmkm.png",
+        },
+        {
+          id: 3,
+          title: "Spribe",
+          img: "/table-provider-jdbaspribe.png",
+        },
+        {
+          id: 4,
+          title: "Rich88",
+          img: "/slot-provider-rich88.png",
+        },
+        {
+          id: 5,
+          title: "PG Soft",
+          img: "/slot-provider-pg.png",
+        },
+        {
+          id: 6,
+          title: "WorldMatch",
+          img: "/slot-provider-worldmatch.png",
+        },
+        {
+          id: 7,
+          title: "KA Gaming",
+          img: "/slot-provider-ka.png",
+        },
+        {
+          id: 8,
+          title: "CQ9",
+          img: "/slot-provider-cq9.png",
+        },
+        {
+          id: 9,
+          title: "PLAY'N GO",
+          img: "/slot-provider-playngo.png",
+        },
+        {
+          id: 10,
+          title: "Bpoker",
+          img: "/table-provider-bpoker.png",
+        },
+        {
+          id: 11,
+          title: "Ludo",
+          img: "/table-provider-ludo.png",
+        },
+      ],
     },
     {
       name: "Crash",
       path: "",
       icon: "/icon-crash.png",
+      subMenu: [
+        {
+          id: 0,
+          title: "All",
+          img: "/all-icon.svg",
+        },
+        {
+          id: 1,
+          title: "Spribe",
+          img: "/table-provider-jdbaspribe.png",
+        },
+        {
+          id: 2,
+          title: "Rich88",
+          img: "/slot-provider-rich88.png",
+        },
+        {
+          id: 3,
+          title: "Jilli",
+          img: "/slot-provider-awcmjili.png",
+        },
+        {
+          id: 4,
+          title: "Pragmatic Play",
+          img: "/provider-awcmpp.png",
+        },
+        {
+          id: 5,
+          title: "Fa Chai",
+          img: "/slot-provider-awcmfc.png",
+        },
+        {
+          id: 6,
+          title: "KingMaker",
+          img: "/table-provider-awcmkm.png",
+        },
+        {
+          id: 7,
+          title: "KA Gaming",
+          img: "/slot-provider-ka.png",
+        },
+      ],
     },
     {
       name: "Fishing",
       path: "",
       icon: "/icon-fish.png",
+      subMenu: [
+        {
+          id: 0,
+          title: "All",
+          img: "/all-icon.svg",
+        },
+        {
+          id: 1,
+          title: "Jilli",
+          img: "/slot-provider-awcmjili.png",
+        },
+        {
+          id: 2,
+          title: "Fa Chai",
+          img: "/slot-provider-awcmfc.png",
+        },
+        {
+          id: 3,
+          title: "JDB",
+          img: "/slot-provider-jdb.png",
+        },
+        {
+          id: 4,
+          title: "KA Gaming",
+          img: "/slot-provider-ka.png",
+        },
+        {
+          id: 5,
+          title: "CQ9",
+          img: "/slot-provider-cq9.png",
+        },
+        {
+          id: 6,
+          title: "Joker",
+          img: "/slot-provider-joker.png",
+        },
+        {
+          id: 7,
+          title: "Yellow Bat",
+          img: "/slot-provider-awcmyesbingo.png",
+        },
+      ],
     },
     {
       name: "Arcade",
       path: "",
       icon: "/icon-arcade.png",
+      subMenu: [
+        {
+          id: 0,
+          title: "All",
+          img: "/all-icon.svg",
+        },
+        {
+          id: 1,
+          title: "JDB",
+          img: "/slot-provider-jdb.png",
+        },
+        {
+          id: 2,
+          title: "Fa Chai",
+          img: "/slot-provider-awcmfc.png",
+        },
+        {
+          id: 3,
+          title: "PG Soft",
+          img: "/slot-provider-pg.png",
+        },
+        {
+          id: 4,
+          title: "KA Gaming",
+          img: "/slot-provider-ka.png",
+        },
+        {
+          id: 5,
+          title: "Rich88",
+          img: "/slot-provider-rich88.png",
+        },
+        {
+          id: 6,
+          title: "CQ9",
+          img: "/slot-provider-cq9.png",
+        },
+      ],
     },
     {
       name: "Lottery",
       path: "",
       icon: "/icon-lottery.png",
+      subMenu: [
+        {
+          id: 0,
+          title: "All",
+          img: "/all-icon.svg",
+        },
+        {
+          id: 1,
+          title: "Jilli",
+          img: "/slot-provider-awcmjili.png",
+        },
+        {
+          id: 2,
+          title: "KingMaker",
+          img: "/table-provider-awcmkm.png",
+        },
+        {
+          id: 3,
+          title: "Yellow Bat",
+          img: "/slot-provider-awcmyesbingo.png",
+        },
+        {
+          id: 4,
+          title: "Number",
+          img: "/provider-number.png",
+        },
+        {
+          id: 5,
+          title: "Joker",
+          img: "/slot-provider-joker.png",
+        },
+      ],
     },
   ];
 
@@ -227,8 +547,9 @@ const DBMobileSideMenu = () => {
                       <div className="absolute overflow-y-scroll top-0 left-[190px] h-[100vh] max-w-[29.33vw] bg-[#333333] transition-all duration-300 ease-in-out">
                         <div className="w-full flex flex-col gap-y-3 p-2">
                           {menu.subMenu.map((sMenu) => (
-                            <div
+                            <Link
                               key={sMenu.id}
+                              to={`${sMenu?.path}?cat="${sMenu.title}"`}
                               className="flex flex-col items-center gap-y-2 w-full px-2 py-3 border-b border-slate-700"
                             >
                               <img
@@ -237,7 +558,7 @@ const DBMobileSideMenu = () => {
                                 alt={sMenu.title}
                               />
                               <p>{sMenu.title}</p>
-                            </div>
+                            </Link>
                           ))}
                         </div>
                       </div>

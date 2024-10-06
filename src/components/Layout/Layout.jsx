@@ -12,8 +12,7 @@ import DBMyAccount from "../../pages/dashboard/DBMyAccount";
 import DBMobileSideMenu from "../DBMobileSideMenu";
 
 const Layout = ({ children }) => {
-  const { isLoginModalopen, setIsOpenSideDropdown, isOpenSideDropdown } =
-    useStore();
+  const { isLoginModalopen, setIsOpenSideDropdown } = useStore();
   const [myAccount, setMyAccount] = useState(false);
   const [sideMenuOpen, setSideMenuOpen] = useState(false);
 
