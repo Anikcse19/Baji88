@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { IoIosCheckmark } from "react-icons/io";
+import { MdOutlineThumbUpOffAlt } from "react-icons/md";
+import AmountList from "./AmountList";
 
 const PaymentMethods = ({ setDepositeChannel }) => {
   const [active, setActive] = useState("bkash");
@@ -145,6 +147,7 @@ const PaymentMethods = ({ setDepositeChannel }) => {
       </div>
 
       <div className=" mt-6  hidden md:block">
+        {/* Payment Type */}
         <p className="text-white text-sm font-semibold">Payment Type</p>
         <div className="mt-2 border-b border-primary ">
           <button className="bg-primary px-5 py-1 rounded-t-md uppercase text-white">
@@ -152,21 +155,28 @@ const PaymentMethods = ({ setDepositeChannel }) => {
           </button>
         </div>
 
+        {/* Deposite Channel */}
         <div className="bg-black bg-opacity-30 py-5 px-2">
           <div>
             <p className="text-sm text-[#7293e1]">Deposite Channel</p>
             <div className="mt-4 text-sm font-medium flex items-center gap-4">
-              <button className=" border border-yellow text-yellow rounded-[4px] w-[120px] py-2">
+              <button className=" border border-yellow text-yellow rounded-[4px] w-[120px] py-2 relative">
+                <span className="bg-[#77b167] rounded-r top-1 -left-1 absolute px-1 py-[2px] text-white">
+                  <MdOutlineThumbUpOffAlt />
+                </span>
                 Cash Out
               </button>
-              <button className="border border-gray-500 rounded-[4px] w-[120px] py-2 text-gray-500">
+              <button className="border border-gray-500 rounded-[4px] w-[120px] py-2 text-gray-500 relative">
+                <span className="bg-[#77b167] rounded-r top-1 -left-1 absolute px-1 py-[2px] text-white">
+                  <MdOutlineThumbUpOffAlt />
+                </span>
                 Send Money
               </button>
             </div>
           </div>
         </div>
 
-        <div></div>
+        <AmountList />
       </div>
     </div>
   );

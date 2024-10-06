@@ -62,7 +62,7 @@ const MemberProfile = () => {
                 <SwiperSlide key={idx} className="bg-transparent">
                   <div className="bg-transparent rounded-md">
                     <img
-                      src="/public/image_171226.jpg"
+                      src="/image_171226.jpg"
                       alt=""
                       className="rounded-md bg-transparent"
                     />
