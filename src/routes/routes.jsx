@@ -31,6 +31,12 @@ import Deposite from "../pages/dashboard/Deposite";
 import Withdraw from "../pages/dashboard/Withdraw";
 import MemberProfile from "../pages/MemberProfile";
 import CasinoPageMobile from "../pages/mobile/CasinoPageMobile";
+import SlotsPageMobile from "../pages/mobile/SlotsPageMobile";
+import TablesPageMobile from "../pages/mobile/TablesPageMobile";
+import CrashPageMobile from "../pages/mobile/CrashPageMobile";
+import FishingPageMobile from "../pages/mobile/FishingPageMobile";
+import ArcadePageMobile from "../pages/mobile/ArcadePageMobile";
+import LottryPageMobile from "../pages/mobile/LotteryPageMobile";
 
 const routes = createBrowserRouter([
   {
@@ -57,29 +63,54 @@ const routes = createBrowserRouter([
     path: "/mcasino",
     element: <CasinoPageMobile />,
   },
+
   {
     path: "/slot",
     element: <SlotPgae />,
+  },
+  {
+    path: "/mslots",
+    element: <SlotsPageMobile />,
   },
   {
     path: "/table",
     element: <TablePage />,
   },
   {
+    path: "/mtable",
+    element: <TablesPageMobile />,
+  },
+  {
     path: "/fishing",
     element: <FishingPage />,
+  },
+  {
+    path: "/mfishing",
+    element: <FishingPageMobile />,
   },
   {
     path: "/crash",
     element: <CrashPage />,
   },
   {
+    path: "/mcrash",
+    element: <CrashPageMobile />,
+  },
+  {
     path: "/arcade",
     element: <ArcadePage />,
   },
   {
+    path: "/marcade",
+    element: <ArcadePageMobile />,
+  },
+  {
     path: "/lottery",
     element: <LotteryPage />,
+  },
+  {
+    path: "/mlottery",
+    element: <LottryPageMobile />,
   },
   {
     path: "/sports",

@@ -3,7 +3,7 @@ import Layout from "../../components/Layout/Layout";
 import { CiSearch } from "react-icons/ci";
 import { useLocation } from "react-router-dom";
 
-const CasinoPageMobile = () => {
+const SlotsPageMobile = () => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const category = queryParams.get("cat");
@@ -122,7 +122,7 @@ const CasinoPageMobile = () => {
   );
 };
 
-export default CasinoPageMobile;
+export default SlotsPageMobile;
 
 const elements1 = [
   {
@@ -133,13 +133,13 @@ const elements1 = [
   },
   {
     id: 1,
-    title: "Evolution",
-    img: "/provider-evo.png",
+    title: "Jilli",
+    img: "/slot-provider-awcmjili.png",
   },
   {
     id: 2,
-    title: "Sexy",
-    img: "/provider-awcmsexy.png",
+    title: "PG Soft",
+    img: "/slot-provider-pg.png",
   },
   {
     id: 3,
@@ -148,12 +148,77 @@ const elements1 = [
   },
   {
     id: 4,
+    title: "JDB",
+    img: "/slot-provider-jdb.png",
+  },
+  {
+    id: 5,
+    title: "Fa Chai",
+    img: "/slot-provider-awcmfc.png",
+  },
+  {
+    id: 6,
+    title: "SpadeGaming",
+    img: "/slot-provider-awcmsg.png",
+  },
+  {
+    id: 7,
+    title: "Red Tiger",
+    img: "/slot-provider-awcmrt.png",
+  },
+  {
+    id: 8,
+    title: "FastSpin",
+    img: "/slot-provider-awcmfastspin.png",
+  },
+  {
+    id: 9,
     title: "Playtech",
     img: "/provider-awcmpt.png",
   },
   {
-    id: 5,
-    title: "HotRoad",
-    img: "/provider-awcmhotroad.png",
+    id: 10,
+    title: "Yellow Bat",
+    img: "/slot-provider-awcmyesbingo.png",
+  },
+  {
+    id: 11,
+    title: "Rich88",
+    img: "/slot-provider-rich88.png",
+  },
+  {
+    id: 100,
+    title: "KA Gaming",
+    img: "/slot-provider-ka.png",
+  },
+  {
+    id: 12,
+    title: "WorldMatch",
+    img: "/slot-provider-worldmatch.png",
+  },
+  {
+    id: 13,
+    title: "CQ9",
+    img: "/slot-provider-cq9.png",
+  },
+  {
+    id: 14,
+    title: "Joker",
+    img: "/slot-provider-joker.png",
+  },
+  {
+    id: 15,
+    title: "PLAY'N GO",
+    img: "/slot-provider-playngo.png",
+  },
+  {
+    id: 16,
+    title: "Play8",
+    img: "/slot-provider-awcmp8.png",
+  },
+  {
+    id: 17,
+    title: "Netent",
+    img: "/slot-provider-netent.png",
   },
 ];

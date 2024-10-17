@@ -3,7 +3,7 @@ import Layout from "../../components/Layout/Layout";
 import { CiSearch } from "react-icons/ci";
 import { useLocation } from "react-router-dom";
 
-const CasinoPageMobile = () => {
+const ArcadePageMobile = () => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const category = queryParams.get("cat");
@@ -122,38 +122,49 @@ const CasinoPageMobile = () => {
   );
 };
 
-export default CasinoPageMobile;
+export default ArcadePageMobile;
 
 const elements1 = [
   {
     id: 0,
     title: "All",
-    path: "/mcasino",
+    path: "/marcade?cat=All",
     img: "/all-icon.svg",
   },
   {
     id: 1,
-    title: "Evolution",
-    img: "/provider-evo.png",
+    title: "JDB",
+    path: "/marcade?cat=JDB",
+    img: "/slot-provider-jdb.png",
   },
   {
     id: 2,
-    title: "Sexy",
-    img: "/provider-awcmsexy.png",
+    title: "Fa Chai",
+    path: "/marcade?cat=Fa Chai",
+    img: "/slot-provider-awcmfc.png",
   },
   {
     id: 3,
-    title: "Pragmatic Play",
-    img: "/provider-awcmpp.png",
+    title: "PG Soft",
+    path: "/marcade?cat=PG Soft",
+    img: "/slot-provider-pg.png",
   },
   {
     id: 4,
-    title: "Playtech",
-    img: "/provider-awcmpt.png",
+    title: "KA Gaming",
+    path: "/marcade?cat=KA Gaming",
+    img: "/slot-provider-ka.png",
   },
   {
     id: 5,
-    title: "HotRoad",
-    img: "/provider-awcmhotroad.png",
+    title: "Rich88",
+    path: "/marcade?cat=Rich88",
+    img: "/slot-provider-rich88.png",
+  },
+  {
+    id: 6,
+    title: "CQ9",
+    path: "/marcade?cat=CQ9",
+    img: "/slot-provider-cq9.png",
   },
 ];

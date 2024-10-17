@@ -3,7 +3,7 @@ import Layout from "../../components/Layout/Layout";
 import { CiSearch } from "react-icons/ci";
 import { useLocation } from "react-router-dom";
 
-const CasinoPageMobile = () => {
+const FishingPageMobile = () => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const category = queryParams.get("cat");
@@ -122,38 +122,55 @@ const CasinoPageMobile = () => {
   );
 };
 
-export default CasinoPageMobile;
+export default FishingPageMobile;
 
 const elements1 = [
   {
     id: 0,
     title: "All",
-    path: "/mcasino",
+    path: "/mfishing?cat=All",
     img: "/all-icon.svg",
   },
   {
     id: 1,
-    title: "Evolution",
-    img: "/provider-evo.png",
+    title: "Jilli",
+    path: "/mfishing?cat=Jilli",
+    img: "/slot-provider-awcmjili.png",
   },
   {
     id: 2,
-    title: "Sexy",
-    img: "/provider-awcmsexy.png",
+    title: "Fa Chai",
+    path: "/mfishing?cat=Fa Chai",
+    img: "/slot-provider-awcmfc.png",
   },
   {
     id: 3,
-    title: "Pragmatic Play",
-    img: "/provider-awcmpp.png",
+    title: "JDB",
+    path: "/mfishing?cat=JDB",
+    img: "/slot-provider-jdb.png",
   },
   {
     id: 4,
-    title: "Playtech",
-    img: "/provider-awcmpt.png",
+    title: "KA Gaming",
+    path: "/mfishing?cat=KA Gaming",
+    img: "/slot-provider-ka.png",
   },
   {
     id: 5,
-    title: "HotRoad",
-    img: "/provider-awcmhotroad.png",
+    title: "CQ9",
+    path: "/mfishing?cat=CQ9",
+    img: "/slot-provider-cq9.png",
+  },
+  {
+    id: 6,
+    title: "Joker",
+    path: "/mfishing?cat=Joker",
+    img: "/slot-provider-joker.png",
+  },
+  {
+    id: 7,
+    title: "Yellow Bat",
+    path: "/mfishing?cat=Yellow Bat",
+    img: "/slot-provider-awcmyesbingo.png",
   },
 ];

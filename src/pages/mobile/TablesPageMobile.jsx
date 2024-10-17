@@ -3,7 +3,7 @@ import Layout from "../../components/Layout/Layout";
 import { CiSearch } from "react-icons/ci";
 import { useLocation } from "react-router-dom";
 
-const CasinoPageMobile = () => {
+const TablesPageMobile = () => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const category = queryParams.get("cat");
@@ -122,38 +122,79 @@ const CasinoPageMobile = () => {
   );
 };
 
-export default CasinoPageMobile;
+export default TablesPageMobile;
 
 const elements1 = [
   {
     id: 0,
     title: "All",
-    path: "/mcasino",
+    path: "/mtable?cat=All",
     img: "/all-icon.svg",
   },
   {
     id: 1,
-    title: "Evolution",
-    img: "/provider-evo.png",
+    title: "Jilli",
+    path: "/mtable?cat=Jilli",
+    img: "/slot-provider-awcmjili.png",
   },
   {
     id: 2,
-    title: "Sexy",
-    img: "/provider-awcmsexy.png",
+    title: "KingMaker",
+    path: "/mtable?cat=KingMaker",
+    img: "/table-provider-awcmkm.png",
   },
   {
     id: 3,
-    title: "Pragmatic Play",
-    img: "/provider-awcmpp.png",
+    title: "Spribe",
+    path: "/mtable?cat=Spribe",
+    img: "/table-provider-jdbaspribe.png",
   },
   {
     id: 4,
-    title: "Playtech",
-    img: "/provider-awcmpt.png",
+    title: "Rich88",
+    path: "/mtable?cat=Rich88",
+    img: "/slot-provider-rich88.png",
   },
   {
     id: 5,
-    title: "HotRoad",
-    img: "/provider-awcmhotroad.png",
+    title: "PG Soft",
+    path: "/mtable?cat=PG Soft",
+    img: "/slot-provider-pg.png",
+  },
+  {
+    id: 6,
+    title: "WorldMatch",
+    path: "/mtable?cat=WorldMatch",
+    img: "/slot-provider-worldmatch.png",
+  },
+  {
+    id: 7,
+    title: "KA Gaming",
+    path: "/mtable?cat=KA Gaming",
+    img: "/slot-provider-ka.png",
+  },
+  {
+    id: 8,
+    title: "CQ9",
+    path: "/mtable?cat=CQ9",
+    img: "/slot-provider-cq9.png",
+  },
+  {
+    id: 9,
+    title: "PLAY'N GO",
+    path: "/mtable?cat=PLAY'N GO",
+    img: "/slot-provider-playngo.png",
+  },
+  {
+    id: 10,
+    title: "Bpoker",
+    path: "/mtable?cat=Bpoker",
+    img: "/table-provider-bpoker.png",
+  },
+  {
+    id: 11,
+    title: "Ludo",
+    path: "/mtable?cat=Ludo",
+    img: "/table-provider-ludo.png",
   },
 ];

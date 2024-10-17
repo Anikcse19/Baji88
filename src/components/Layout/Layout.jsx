@@ -58,7 +58,10 @@ const Layout = ({ children }) => {
           }`}
           onClick={(e) => e.stopPropagation()} // Prevent click inside menu from closing it
         >
-          <DBMobileSideMenu />
+          <DBMobileSideMenu
+            setSideMenuOpen={setSideMenuOpen}
+            setIsOpenSideDropdown={setIsOpenSideDropdown}
+          />
         </div>
       </div>
 
