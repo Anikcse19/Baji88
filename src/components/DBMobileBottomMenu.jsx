@@ -8,12 +8,12 @@ const DBMobileBottomMenu = ({ setMyAccount }) => {
   const menus = [
     {
       name: "Home",
-      path: "",
+      path: "/",
       icon: "/icon-home.png",
     },
     {
       name: "Promotions",
-      path: "",
+      path: "/user-panel/promotion",
       icon: "/icon-promotion.png",
     },
     {
@@ -24,7 +24,7 @@ const DBMobileBottomMenu = ({ setMyAccount }) => {
   ];
 
   return (
-    <div className="w-full h-[50px]  bg-black flex items-center justify-between gap-5">
+    <div className="w-full h-[50px]  bg-black flex items-center justify-between gap-5 border-t border-gray-500">
       <div className={`${user == "" ? "w-[75%]" : "w-full"} h-full`}>
         {!user == "" ? (
           <div className="flex items-center justify-between w-full h-full">

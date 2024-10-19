@@ -11,7 +11,6 @@ import { RiLogoutBoxRLine } from "react-icons/ri";
 const DBMyAccount = ({ setMyAccount }) => {
   return (
     <div className="absolute top-0 left-0 h-full w-full bg-black">
-      
       {/* Name and VIP Points */}
       <div
         className="h-[20vh] bg-cover relative z-[9] bg-center"
@@ -89,9 +88,15 @@ const DBMyAccount = ({ setMyAccount }) => {
               Betting Records
             </MyAccountBtns>
 
-            <MyAccountBtns imgUrl="/icon-turnover.png">Turnover</MyAccountBtns>
+            <MyAccountBtns
+              url="/user-panel/turnover"
+              imgUrl="/icon-turnover.png"
+            >
+              Turnover
+            </MyAccountBtns>
 
             <MyAccountBtns
+              url="/user-panel/transaction-records"
               imgUrl="/icon-records.png"
               className="flex flex-col leading-4"
             >
@@ -164,7 +169,6 @@ const DBMyAccount = ({ setMyAccount }) => {
           </button>
         </div>
       </div>
-
     </div>
   );
 };

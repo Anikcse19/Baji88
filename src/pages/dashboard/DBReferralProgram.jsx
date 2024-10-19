@@ -6,6 +6,7 @@ import MobileFooterSection from "../../components/MobileFooterSection";
 import RewardDetailsSidebar from "../../components/RewardDetailsSidebar";
 import useStore from "../../Zustand/store/useStore.js";
 import { useEffect } from "react";
+import UserPanelLayout from "../../components/Layout/UserPanelLayout.jsx";
 
 const DBReferralProgram = ({ children }) => {
   const { openRewardTable } = useStore();
@@ -26,32 +27,33 @@ const DBReferralProgram = ({ children }) => {
   }, [openRewardTable]);
 
   return (
-    <div>
-      <div className="bg-[#14805e]">
-        {/* Common Nav */}
-        <div className="flex items-center justify-between text-white py-2 px-3">
-          <Link to="/">
-            <IoIosArrowBack className="text-[26px]" />
-          </Link>
-          <p className="font-medium">Referral Program</p>
+    <UserPanelLayout>
+      <div>
+        <div className="bg-[#14805e]">
+          {/* Common Nav */}
+          <div className="flex items-center justify-between text-white py-2 px-3">
+            <Link to="/">
+              <IoIosArrowBack className="text-[26px]" />
+            </Link>
+            <p className="font-medium">Referral Program</p>
 
-          <div></div>
+            <div></div>
+          </div>
+
+          {/* Switch Links */}
+          <div className="flex items-center justify-between mt-3">
+            <ReferralProgramBtn url="/referral-program/promotion">
+              Referral Info
+            </ReferralProgramBtn>
+            <ReferralProgramBtn url="/referral-program/details">
+              My Referral
+            </ReferralProgramBtn>
+          </div>
         </div>
 
-        {/* Switch Links */}
-        <div className="flex items-center justify-between mt-3">
-          <ReferralProgramBtn url="/referral-program/promotion">
-            Referral Info
-          </ReferralProgramBtn>
-          <ReferralProgramBtn url="/referral-program/details">
-            My Referral
-          </ReferralProgramBtn>
-        </div>
-      </div>
+        {children}
 
-      {children}
-
-      {/* RewardsDetails Sidebar */}
+        {/* RewardsDetails Sidebar */}
         <div
           className={`w-screen h-full bg-black fixed z-[9999] top-0 right-0 transition-transform  duration-300 ${
             openRewardTable ? "translate-x-0" : "translate-x-full"
@@ -59,10 +61,10 @@ const DBReferralProgram = ({ children }) => {
         >
           <RewardDetailsSidebar />
         </div>
-  
 
-      <MobileFooterSection />
-    </div>
+        <MobileFooterSection />
+      </div>
+    </UserPanelLayout>
   );
 };
 

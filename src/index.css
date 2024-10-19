@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -71,4 +70,151 @@ div {
   border: solid white;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
+}
+
+.line {
+  position: absolute;
+  z-index: 1;
+  top: -0.1875rem;
+  left: 0;
+  width: 100%;
+  height: 0.4375rem;
+  background: url(/dotImg.png) repeat-x center;
+}
+
+.vip-text {
+  font-size: 28px;
+  font-weight: 900;
+  background: -webkit-linear-gradient(#ffffbe, #d1a129);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.content {
+  min-height: initial;
+  text-align: center;
+  transition: height 3s;
+}
+
+.referral-container,
+.referral-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: linear-gradient(0deg, #111 0, rgba(17, 17, 17, 0.9) 67%);
+}
+
+.referral-wrapper::before {
+  top: 145px;
+  background: url(/referral-program-bg.png) no-repeat center bottom;
+  background-size: cover;
+}
+
+.referral-wrapper::after,
+.referral-wrapper::before {
+  z-index: 2;
+  width: 100%;
+  height: 800px;
+}
+.referral-wrapper::after,
+.referral-wrapper::before {
+  z-index: 2;
+  width: 100%;
+  height: 800px;
+}
+
+.referral-container,
+.referral-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.referral-program-promotion {
+  width: 75rem;
+  font-family: "Helvetica Neue", sans-serif;
+  position: relative;
+}
+
+.referral-program-promotion__bg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+.referral-program-promotion__head {
+  padding-bottom: 0.625rem;
+}
+.referral-program-promotion-banner {
+  padding-bottom: 45%;
+  position: relative;
+  z-index: 2;
+}
+
+.referral-program-promotion-banner__logo {
+  width: 6.25rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 4.375rem;
+  margin: 0 auto;
+}
+
+.referral-program-promotion-banner__logo img,
+.referral-program-promotion__bg img,
+.referral-program-promotion__body-left .referral-program-section__section-1 {
+  width: 100%;
+}
+img {
+  border-style: none;
+}
+
+.referral-program-promotion-banner__title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 9.375rem;
+}
+
+.referral-program-promotion-banner__title-fragment {
+  display: block;
+  white-space: nowrap;
+  text-align: center;
+  text-shadow: 0 0.125rem 0.25rem #000;
+  color: #fff;
+  font-size: 2.8125rem;
+  line-height: 1.2;
+  font-weight: 900;
+}
+.referral-program-promotion-banner__title-fragment--highlight {
+  color: #ffde1a;
+}
+
+.referral-program-promotion-banner__title-fragment {
+  display: block;
+  white-space: nowrap;
+  text-align: center;
+  text-shadow: 0 0.125rem 0.25rem #000;
+  color: #fff;
+  font-size: 2.8125rem;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.referral-program-promotion-banner__img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+}
+
+.referral-program-promotion-banner__img img {
+  position: absolute;
+  top: -11.25rem;
+  left: 50%;
+  width: 130%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
 }

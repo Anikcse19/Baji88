@@ -37,6 +37,12 @@ import CrashPageMobile from "../pages/mobile/CrashPageMobile";
 import FishingPageMobile from "../pages/mobile/FishingPageMobile";
 import ArcadePageMobile from "../pages/mobile/ArcadePageMobile";
 import LottryPageMobile from "../pages/mobile/LotteryPageMobile";
+import PromotionPage from "../pages/PromotionPage";
+import VIPPage from "../pages/VIPPage";
+import RefferalPage from "../pages/RefferalPage";
+import Turnover from "../pages/dashboard/Turnover";
+import TransactionRecords from "../pages/dashboard/TransactionRecords";
+import Promotions from "../pages/dashboard/Promotions";
 
 const routes = createBrowserRouter([
   {
@@ -116,6 +122,18 @@ const routes = createBrowserRouter([
     path: "/sports",
     element: <SportsPage />,
   },
+  {
+    path: "/promotional",
+    element: <PromotionPage />,
+  },
+  {
+    path: "/vip",
+    element: <VIPPage />,
+  },
+  {
+    path: "/refferel",
+    element: <RefferalPage />,
+  },
 
   {
     path: "/deposit",
@@ -156,6 +174,18 @@ const routes = createBrowserRouter([
   {
     path: "/user-panel/betting-history",
     element: <BettingHistory />,
+  },
+  {
+    path: "/user-panel/turnover",
+    element: <Turnover />,
+  },
+  {
+    path: "/user-panel/transaction-records",
+    element: <TransactionRecords />,
+  },
+  {
+    path: "/user-panel/promotion",
+    element: <Promotions />,
   },
 
   {
