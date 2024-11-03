@@ -72,7 +72,7 @@ const Header = ({ setSideMenuOpen }) => {
               />
               <div onClick={() => navigate("/")} className="">
                 <img
-                  className="w-[180px] h-[50px] cursor-pointer object-cover"
+                  className="w-[100px] md:w-[180px] h-[30px] md:h-[50px] cursor-pointer object-cover"
                   src="/logo (2).png"
                   alt=""
                 />
