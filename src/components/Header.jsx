@@ -68,7 +68,7 @@ const Header = ({ setSideMenuOpen }) => {
             <div className="flex items-center gap-2 lg:gap-5">
               <BiMenuAltLeft
                 onClick={() => setSideMenuOpen((prev) => !prev)}
-                className="lg:hidden text-green-700 text-3xl"
+                className="lg:hidden text-purple-200 text-3xl"
               />
               <div onClick={() => navigate("/")} className="">
                 <img
@@ -112,11 +112,11 @@ const Header = ({ setSideMenuOpen }) => {
               </div>
               <div className="lg:hidden flex flex-col items-center">
                 <img
-                  className="w-6 h-5 hue-rotate-90 saturate-200 brightness-200"
+                  className="w-6 h-5 hue-rotate-180 saturate-200 brightness-200"
                   src="/app-icon.svg"
                   alt=""
                 />
-                <p className="text-green-500 text-sm">App</p>
+                <p className="text-purple-900 text-sm">App</p>
               </div>
               <div className="lg:hidden flex flex-col items-center ">
                 <img
