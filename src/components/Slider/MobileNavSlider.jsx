@@ -5,11 +5,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
 
-const images = [
-  "/fc-logo.png",
-  "/deccan-gladiators.png",
-  "/sunriser.png",
-];
+const images = ["/fc-logo.png", "/deccan-gladiators.png", "/sunriser.png"];
 
 export default function MobileNavSlider() {
   return (
@@ -29,7 +25,10 @@ export default function MobileNavSlider() {
         className="MobileNavSlider"
       >
         {images.map((slide, idx) => (
-          <SwiperSlide key={idx} className="swiperSlide w-[30px] h-[30px] bg-transparent">
+          <SwiperSlide
+            key={idx}
+            className="swiperSlide w-[30px] h-[30px] bg-transparent"
+          >
             <img className="m-2" src={slide} alt="" />
           </SwiperSlide>
         ))}

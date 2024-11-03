@@ -19,7 +19,11 @@ const DBMobileNavbar = ({ setSideMenuOpen }) => {
         {/* Logo and Nav Slider */}
         <div className="w-full flex items-center gap-[8%]">
           <div className="w-[60px]">
-            <img src="/logo.png" alt="logo" className="w-full h-full object-cove" />
+            <img
+              src="/logo (2).png"
+              alt="logo"
+              className="w-full h-full object-cove"
+            />
           </div>
 
           <div className="max-w-[100px] max-h-[35px] overflow-hidden">

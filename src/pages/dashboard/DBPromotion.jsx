@@ -38,7 +38,7 @@ const DBPromotion = () => {
             backgroundImage: "url(/referral-program-banner.png)",
           }}
         >
-          <img src="/logo.png" alt="" className="w-[80px]" />
+          <img src="/logo (2).png" alt="" className="w-[80px]" />
           <h1 className="text-[34px] uppercase font-bold text-white">
             Refer Your Friends
           </h1>

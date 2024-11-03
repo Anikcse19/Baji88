@@ -39,7 +39,7 @@ const LotteryPage = () => {
       </div>
 
       {/* filter section */}
-      <div className="bg-[#127556] w-full  flex items-center">
+      <div className="bg-primary w-full  flex items-center">
         {currentFilterGameStep == 1 ? (
           <FilterGamesStep1 />
         ) : (

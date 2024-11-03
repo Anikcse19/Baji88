@@ -9,7 +9,7 @@ export default function HomeBanner() {
   return (
     <div className="mb-10">
       <HeroCarousel elements={banner} />
-      <div className="w-full h-8 bg-black lg:bg-[#1c6d51]">
+      <div className="w-full h-8 bg-black lg:bg-primary">
         <div className="w-[95%] lg:w-[85%] mx-auto flex items-center justify-center gap-1 ">
           <IoVolumeHigh className="text-white text-xl hidden lg:block" />
           <HiOutlineSpeakerphone className="lg:hidden text-green-500 text-6xl" />
@@ -28,13 +28,13 @@ export default function HomeBanner() {
       <div className="mt-12 hidden lg:block">
         <div className="w-[75%] mx-auto flex items-center justify-between gap-5">
           <div className="h-[400px] w-[550px] ">
-            <div className="bg-[#14805E] w-full py-4 px-6">
+            <div className="bg-primary w-full py-4 px-6">
               <p className="text-white">প্রিয়</p>
             </div>
             <SingleSlider className="w-[550px]" />
           </div>
           <div className="h-[400px] w-[550px]">
-            <div className="bg-[#14805E] w-full py-4 px-4">
+            <div className="bg-primary w-full py-4 px-4">
               <p className="text-white">প্রিয়</p>
             </div>
             <SingleSlider className="w-[550px]" />

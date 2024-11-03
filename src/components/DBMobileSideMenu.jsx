@@ -581,7 +581,7 @@ const DBMobileSideMenu = ({ setSideMenuOpen }) => {
         <div className="bg-[#252525] px-2 pt-2 border-b border-gray-600">
           {/* Logo Section */}
           <div className="border-b border-[#14805E] flex justify-center items-center flex-col gap-2 pb-4 ">
-            <img src="/logo.png" alt="" className="w-[80px] h-[60px]" />
+            <img src="/logo (2).png" alt="" className="w-[80px] h-[60px]" />
             <p className="text-white text-lg">Front Of Shirt Partner</p>
             <img
               src="/afc-bournemouth.png"

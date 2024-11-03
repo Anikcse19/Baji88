@@ -60,7 +60,7 @@ const Header = ({ setSideMenuOpen }) => {
         // style={{
         //   background: "linear-gradient(to bottom,#1bac7e 0,#14805e 100%)",
         // }}
-        className="lg:bg-gradient-to-b from-[#1bac7e] to-[#14805e] bg-[#111111]"
+        className="lg:bg-gradient-to-b bg-primary "
       >
         <Center>
           <div className="flex items-center justify-between py-2 px-2">
@@ -72,8 +72,8 @@ const Header = ({ setSideMenuOpen }) => {
               />
               <div onClick={() => navigate("/")} className="">
                 <img
-                  className="w-[70px] lg:w-[120px] h-[30px] lg:h-[50px] cursor-pointer"
-                  src="/logo.png"
+                  className="w-[180px] h-[50px] cursor-pointer object-cover"
+                  src="/logo (2).png"
                   alt=""
                 />
               </div>

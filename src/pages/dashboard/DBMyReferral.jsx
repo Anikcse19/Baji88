@@ -14,11 +14,10 @@ const DBMyReferral = () => {
     setOpenRewardTable(!openRewardTable);
   };
 
-
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
-  
+
   return (
     <DBReferralProgram>
       <div className="pb-10 relative">
@@ -29,7 +28,7 @@ const DBMyReferral = () => {
             backgroundImage: "url(/referral-program-banner.png)",
           }}
         >
-          <img src="/logo.png" alt="" className="w-[80px]" />
+          <img src="/logo (2).png" alt="" className="w-[80px]" />
           <h1 className="text-[34px] uppercase font-bold text-white">
             Refer Your Friends
           </h1>
@@ -79,7 +78,8 @@ const DBMyReferral = () => {
           }}
         >
           {/* Reward details Btn */}
-          <button onClick={()=>handleDrawerToggle()}
+          <button
+            onClick={() => handleDrawerToggle()}
             className="absolute right-0 top-0 text-xs bg-yellow px-3 py-1"
             style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 10% 100%)" }}
           >
@@ -161,9 +161,6 @@ const DBMyReferral = () => {
             </div>
           </div>
         )}
-
-
-       
       </div>
     </DBReferralProgram>
   );

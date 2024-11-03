@@ -30,7 +30,7 @@ const FilterGamesStep1 = () => {
           boxShadow:
             " -10px 0px 10px -5px rgba(0, 0, 0, 0.5), 10px 0px 10px -5px rgba(0, 0, 0, 0.5)",
         }}
-        className="bg-[#127556] px-6 py-3 cursor-pointer hover:bg-[#2d866bf6] transition-all duration-500 ease-in-out"
+        className="bg-primary px-6 py-3 cursor-pointer hover:bg-[#2d866bf6] transition-all duration-500 ease-in-out"
       >
         <p
           onClick={() => setCurrentFilterGameStep(2)}

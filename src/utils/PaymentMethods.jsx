@@ -79,7 +79,7 @@ const PaymentMethods = ({ setDepositeChannel }) => {
       name: "ETH",
       method: "eth",
       depositeChannel: "ETH",
-      icon: "/ethereum-eth-logo.png",
+      icon: "/ethereum-eth-logo (2).png",
       promotion: "1.5",
     },
     {

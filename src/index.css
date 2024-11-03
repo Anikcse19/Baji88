@@ -4,6 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary-color: #ac3ae0;
+  --secondary-color: #2ecc71;
+  --font-size-base: 16px;
+  --padding-base: 10px;
+}
+
 * {
   margin: 0;
   padding: 0;
